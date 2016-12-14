@@ -29,6 +29,7 @@ $bw = new Thumb("Bimmerworld");
 
 // thumb object modifications
 $subrbn->imgUrl = './images/' . substr($subrbn->id, 0, -4) . '.jpg';
+$subrbn->id = 'suburban';
 $java->name = 'Equation Eval';
 $hands->name = 'Human Hands';
 $itsec->name = "Executive Alliance";
