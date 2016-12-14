@@ -1,5 +1,5 @@
 <?php
-
+// template for all thumbs that appear in portfolio section
 class Thumb {
     public $name;
     public $id;
@@ -13,22 +13,31 @@ class Thumb {
 
 }
 
+// create Thumb objects to populate portfolio section
 $thumbs = array();
 $netnotes = new Thumb('Netnotes');
 $subrbn = new Thumb('Suburban B\'s');
 $java = new Thumb('Java');
 $hands = new Thumb('hands');
 $assembler = new Thumb('Assembler');
-$apfed = new Thumb('Apfed');
+$apfed = new Thumb('APFED');
+$pag = new Thumb('PAG');
+$itsec = new Thumb('itsec');
+$eye = new Thumb('eye');
+$rmc = new Thumb('rmc');
+$bw = new Thumb("Bimmerworld");
 
-// Project object modifications
+// thumb object modifications
 $subrbn->imgUrl = './images/' . substr($subrbn->id, 0, -4) . '.jpg';
 $java->name = 'Equation Eval';
 $hands->name = 'Human Hands';
-$apfed->name = strtoupper($apfed->name);
+$itsec->name = "Executive Alliance";
+$eye->name = "Eye Consultants of Atlanta";
+$rmc->name = "BMWCCA: RMC";
 
 // add all Project objects to array to be used in index.php
-array_push($thumbs, $netnotes, $subrbn, $java, $hands, $assembler, $apfed);
+array_push($thumbs, $netnotes, $subrbn, $java, $hands, $assembler, $apfed,
+    $pag, $itsec, $eye, $rmc, $bw);
 
 
 ?>

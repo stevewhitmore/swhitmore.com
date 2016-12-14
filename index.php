@@ -56,7 +56,7 @@
     <div class="folio-inner">
         <p class="intro">I've really enjoyed working on these projects. The collection below is a bit eclectic since it ranges from WordPress to an assembler written in C. There are too many interesting areas of our field to narrow them down to just one!</p>
 <?php
-    require_once('./Thumb.php');
+    require_once('inc/Thumb.php');
     foreach($thumbs as $thumb) {
         $vf = $thumb->name == 'APFED';
         if($vf) { ?>
