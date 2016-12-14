@@ -93,7 +93,7 @@
 </footer>
 
 <script data-require="jquery@*" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
-<script type="text/javascript" src="http://dev.swhitmore.com/incmain.js"></script>
+<script type="text/javascript" src="./inc/operations.js"></script>
 
 <!--                                           .x+!?T!!+:.
                                             x?!!!!!!!!!!!!!?x
