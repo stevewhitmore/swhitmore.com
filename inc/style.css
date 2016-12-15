@@ -106,11 +106,13 @@ section#portfolio {
     background: #fff;
 }
 section#portfolio h2,
+#pop-inner h2,
 .folio-inner p,
 footer {
     color: #4a6588;
 }
-section#portfolio h2 {
+section#portfolio h2,
+#pop-inner h2 {
     width: auto;
     margin: 20px 0;
     padding-bottom: 10px;
@@ -138,7 +140,7 @@ section#portfolio h2 {
     cursor: pointer;
 }
 .proj-thumb,
-.proj-pop .pop-inner {
+#pop-inner {
     border-radius: 4px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -175,7 +177,7 @@ section#portfolio h2 {
 }
 
 /* Portfolio popup */
-.proj-pop {
+#proj-pop {
     display: none;
     position: fixed;
     top: 0;
@@ -185,7 +187,7 @@ section#portfolio h2 {
     background-color: rgba(75,75,75,0.7);
     z-index: 99;
 }
-.proj-pop .pop-inner {
+#pop-inner {
     position: relative;
     margin: 100px auto;
     width: 80%;
@@ -195,7 +197,7 @@ section#portfolio h2 {
     background-color: #fff;
     border: 1px solid #5A8AC9;
 }
-.proj-pop .pop-inner:before {
+#pop-inner:before {
     content: '';
     display: block;
     position: absolute;
@@ -214,22 +216,22 @@ section#portfolio h2 {
     -webkit-background-size: initial;
     background-size: initial;
 }
-#bimmerworld .proj-pop .pop-inner:before {
+#bimmerworld #pop-inner:before {
     background-image: url('../images/netsuite.png');
 }
-#netnotes .proj-pop .pop-inner:before {
+#netnotes #pop-inner:before {
     background-image: url('../images/jquery.png');
 }
-#java .proj-pop .pop-inner:before {
+#java #pop-inner:before {
     background-image: url('../images/java-logo.png');
 }
-#hands .proj-pop .pop-inner:before {
+#hands #pop-inner:before {
     background-image: url('../images/cpp.png');
 }
-#assembler .proj-pop .pop-inner:before {
+#assembler #pop-inner:before {
     background-image: url('../images/clang.png');
 }
-span.close {
+span#close {
     position: absolute;
     top: -12px;
     right: -12px;
@@ -242,29 +244,29 @@ span.close {
     height: 30px;
     background: url('../images/close.png') no-repeat center #fff;
 }
-.pop-inner h2 {
+#pop-inner h2 {
     padding-left: 15px;
     padding-right: 15px;
 }
-.pop-content {
+#pop-content {
     padding: 0 35px;
     border: 1px solid transparent;
 }
-.pop-content p {
+#pop-content p {
     padding: 10px 0;
 }
-.pop-content span {
+#pop-content span {
     display: block;
     margin: 1em 4em 0;
 }
-.pop-content ul {
+#pop-content ul {
     margin: 0.5em 0 5em 6em;
 }
-.pop-content ul li {
+#pop-content ul li {
     padding: 2px;
 }
 
-.pop-inner a {
+#pop-inner a {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -272,8 +274,8 @@ span.close {
     color: #f18851;
     z-index: 9999;
 }
-.prev,
-.next {
+#prev,
+#next {
     position: absolute;
     top: 0;
     left: 0;
@@ -282,16 +284,16 @@ span.close {
     z-index: 9998;
     cursor: pointer;
 }
-.prev img,
-.next img {
+#prev img,
+#next img {
     position: absolute;
     display: block;
     top: 42%;
     left: 0;
     opacity: 0.5;
 }
-.next,
-.next img {
+#next,
+#next img {
     left: inherit;
     right: 0;
 }
@@ -349,11 +351,11 @@ footer span {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
-    .prev:hover img,
-    .next:hover img {
+    #prev:hover img,
+    #next:hover img {
         opacity: 1;
     }
-    span.close:hover {
+    span#close:hover {
         -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
         -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
@@ -380,7 +382,7 @@ footer span {
     section#testimonials p {
         width: 90%;
     }
-    .proj-pop .pop-inner {
+    #pop-inner {
         margin: 20px auto;
         height: auto;
     }
@@ -389,30 +391,30 @@ footer span {
     .project {
         width: 50%;
     }
-    #portfolio .pop-inner h2 {
+    #portfolio #pop-inner h2 {
         margin: 5px 0;
         font-size: 20px;
     }
-    .pop-content {
+    #pop-content {
         padding: 0 15px;
         font-size: 14px;
     }
-    .proj-pop .pop-inner {
+    #pop-inner {
         height: 325px;
     }
-    .pop-content span {
+    #pop-content span {
         margin-left: 0em;
     }
-    .pop-content p {
+    #pop-content p {
         padding: 0;
     }
-    .pop-content ul {
+    #pop-content ul {
         margin-left: 1em;
     }
-    .prev img {
+    #prev img {
         left: -23px;
     }
-    .next img {
+    #next img {
         right: -23px;
     }
 }
@@ -422,7 +424,7 @@ footer span {
         margin: 0 auto;
         width: 70%;
     }
-    .proj-pop .pop-inner {
+    #pop-inner {
         height: auto;
     }
 }
@@ -438,7 +440,7 @@ footer span {
     .project {
         width: 95%;
     }
-    .proj-pop .pop-inner {
+    #pop-inner {
         margin: 10px auto;
     }
     section#testimonials p {

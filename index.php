@@ -92,9 +92,25 @@
     <span>Made with &hearts; in Fort Collins, CO</span>
 </footer>
 
+<div id="proj-pop">
+    <div id="pop-inner">
+        <h2></h2>
+        <div id="pop-content">
+            <p></p>
+            <span id="my-resp"></span>
+            <ul></ul>
+        </div>
+        <a href="" target="_blank"></a>
+        <span id="prev"><img src="images/arrow-prev.png" /></span>
+        <span id="next"><img src="images/arrow-next.png" /></span>
+        <span id="close"></span>
+    </div>
+</div>
+
 <script data-require="jquery@*" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
-<script type="text/javascript" src="./inc/operations.js"></script>
 <script type="text/javascript" src="./inc/popups.js"></script>
+<script type="text/javascript" src="./inc/main.js"></script>
+
 
 <!--                                           .x+!?T!!+:.
                                             x?!!!!!!!!!!!!!?x
