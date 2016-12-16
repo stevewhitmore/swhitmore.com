@@ -36,7 +36,7 @@ class Popup {
 }
 
 var projPop = document.getElementById('proj-pop'),
-    popInner = document.getElementById('pop-inner'),
+    popInner = document.getElementsByClassName('pop-inner')[0],
     popContent = document.getElementById('pop-content'),
     h2 = popInner.getElementsByTagName('h2')[0],
     span = document.getElementById('my-resp'),

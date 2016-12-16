@@ -1,3 +1,6 @@
+/***************************************************
+     Driver of all site javascript operations.
+***************************************************/
 
 // Smooth scroll down on click 'see portfolio'
 $("#down").click(function() {
@@ -6,7 +9,23 @@ $("#down").click(function() {
     }, 1000);
 });
 
+// Using 'Unslider' v2.0 by @idiot and friends
+var $testimonials = $('#testimonials');
+$testimonials.on('mouseover', function() {
+    $testimonials.unslider('stop');
+}).on('mouseout', function() {
+    $testimonials.unslider('start');
+});
 
+$testimonials.unslider({
+    autoplay: true,
+    infinite: true,
+    arrows: false,
+    delay: 10000
+});
+
+/************ Project popup management **************/
+// variables from popups.js made into jQuery object
 var $projPop = $(projPop),
     $popInner = $(popInner),
     activePop;
@@ -16,6 +35,7 @@ $('.proj-thumb').click(function() {
     let id = $(this).parents().attr('id');
     for(let i = 0; i < allPopups.length; i++) {
         if(id === allPopups[i].htmlID) {
+            $popInner.attr('id', id);
             activePop = allPopups[i];
             activePop.fillContent();
             $projPop.fadeIn();
@@ -23,11 +43,11 @@ $('.proj-thumb').click(function() {
     }
 });
 
-// Hide relevant popup
+// Hide popup
 $('#close').click(function() {
     $('#proj-pop').fadeOut();
 });
-$(projPop).click(function() {
+$projPop.click(function() {
     $(this).fadeOut();
 });
 $popInner.click(function(e) {
@@ -37,10 +57,11 @@ $popInner.click(function(e) {
 // Scroll through popups
 function scrollProjects(el) {
     $('#' + el).click(function() {
-        $popInner.hide();
         var dir = (el === 'next' ? 1 : -1),
             index = allPopups.indexOf(activePop) + dir,
             length = allPopups.length;
+
+        // crude but direct
         if(index >= 0 && index < length) {
             activePop = allPopups[index];
         } else {
@@ -51,9 +72,16 @@ function scrollProjects(el) {
                 activePop = allPopups[0];
             }
         }
+
+        // assign correct id to inner popup area for background image
+        $popInner.attr('id', activePop.htmlID);
+
+        // now we know which project's information to populate the popup
+        $popInner.hide();
         activePop.fillContent();
         $popInner.fadeIn();
     });
 }
 scrollProjects('next');
 scrollProjects('prev');
+/************ /Project popup management **************/

@@ -102,17 +102,18 @@ i.fa {
 /* Portfolio section */
 section#portfolio {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
+    max-width: 1300px;
     background: #fff;
 }
 section#portfolio h2,
-#pop-inner h2,
+.pop-inner h2,
 .folio-inner p,
 footer {
     color: #4a6588;
 }
 section#portfolio h2,
-#pop-inner h2 {
+.pop-inner h2 {
     width: auto;
     margin: 20px 0;
     padding-bottom: 10px;
@@ -134,14 +135,13 @@ section#portfolio h2,
     float: left;
 }
 .proj-thumb {
-    margin: 0 auto 15px;
-    width: 97%;
+    margin: 0 auto 10px;
+    width: 98%;
     overflow: hidden;
     cursor: pointer;
 }
 .proj-thumb,
-#pop-inner {
-    border-radius: 4px;
+.pop-inner {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .proj-thumb.left,
@@ -158,8 +158,8 @@ section#portfolio h2,
 }
 .proj-title {
     position: absolute;
-    display: block;
-    top: -240px;
+    display: none;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -187,17 +187,17 @@ section#portfolio h2,
     background-color: rgba(75,75,75,0.7);
     z-index: 99;
 }
-#pop-inner {
+.pop-inner {
     position: relative;
     margin: 100px auto;
-    width: 80%;
+    width: 85%;
     max-width: 800px;
     height: 470px;
     color: #4b4b4b;
     background-color: #fff;
     border: 1px solid #5A8AC9;
 }
-#pop-inner:before {
+.pop-inner:before {
     content: '';
     display: block;
     position: absolute;
@@ -216,19 +216,19 @@ section#portfolio h2,
     -webkit-background-size: initial;
     background-size: initial;
 }
-#bimmerworld #pop-inner:before {
+#bimmerworld:before {
     background-image: url('../images/netsuite.png');
 }
-#netnotes #pop-inner:before {
+#netnotes:before {
     background-image: url('../images/jquery.png');
 }
-#java #pop-inner:before {
+#java:before {
     background-image: url('../images/java-logo.png');
 }
-#hands #pop-inner:before {
+#hands:before {
     background-image: url('../images/cpp.png');
 }
-#assembler #pop-inner:before {
+#assembler:before {
     background-image: url('../images/clang.png');
 }
 span#close {
@@ -244,7 +244,7 @@ span#close {
     height: 30px;
     background: url('../images/close.png') no-repeat center #fff;
 }
-#pop-inner h2 {
+.pop-inner h2 {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -266,7 +266,7 @@ span#close {
     padding: 2px;
 }
 
-#pop-inner a {
+.pop-inner a {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -303,20 +303,37 @@ section#testimonials {
     background-color: #4b4b4b;
     color: #fff;
 }
-section#testimonials p {
-    width: 80%;
+section#testimonials p,
+section#testimonials span {
+    width: 90%;
     margin: 0 auto;
-    padding: 3em 0;
+    padding: 2em 0 0.5em;
     line-height: 26px;
     border-bottom: 1px solid #4a6588;
 }
 section#testimonials q {
     font-style: italic;
 }
-section#testimonials p span {
+section#testimonials span {
     display: block;
+    padding: 0.5em 0 2em;
     text-align: right;
+    border-bottom: none;
+}
+section#testimonials span a {
     font-size: 14px;
+}
+
+nav.unslider-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}
+.unslider-nav ol li.unslider {
+    border: 2px solid #eee;
+}
+.unslider-nav ol li.unslider-active {
+    background: #eee;
 }
 
 /* Footer styles */
@@ -343,8 +360,11 @@ footer span {
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 	}
+    .proj-title {
+        display: block;
+    }
     .proj-thumb:hover .proj-title {
-        top: 0;
+        top: 110%;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
@@ -382,7 +402,7 @@ footer span {
     section#testimonials p {
         width: 90%;
     }
-    #pop-inner {
+    .pop-inner {
         margin: 20px auto;
         height: auto;
     }
@@ -391,7 +411,7 @@ footer span {
     .project {
         width: 50%;
     }
-    #portfolio #pop-inner h2 {
+    #portfolio .pop-inner h2 {
         margin: 5px 0;
         font-size: 20px;
     }
@@ -399,7 +419,7 @@ footer span {
         padding: 0 15px;
         font-size: 14px;
     }
-    #pop-inner {
+    .pop-inner {
         height: 325px;
     }
     #pop-content span {
@@ -424,7 +444,7 @@ footer span {
         margin: 0 auto;
         width: 70%;
     }
-    #pop-inner {
+    .pop-inner {
         height: auto;
     }
 }
@@ -440,7 +460,7 @@ footer span {
     .project {
         width: 95%;
     }
-    #pop-inner {
+    .pop-inner {
         margin: 10px auto;
     }
     section#testimonials p {
