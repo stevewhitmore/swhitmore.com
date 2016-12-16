@@ -10,18 +10,17 @@ $("#down").click(function() {
 });
 
 // Using 'Unslider' v2.0 by @idiot and friends
-var $testimonials = $('#testimonials');
-$testimonials.on('mouseover', function() {
-    $testimonials.unslider('stop');
-}).on('mouseout', function() {
-    $testimonials.unslider('start');
+var $slider = $('#testimonials').unslider({
+  animation: "fade",
+  autoplay: true,
+  delay: 7500,
+  arrows: false
 });
 
-$testimonials.unslider({
-    autoplay: true,
-    infinite: true,
-    arrows: false,
-    delay: 10000
+$slider.on('mouseover', function() {
+    $slider.data('unslider').stop();
+}).on('mouseout', function() {
+    $slider.data('unslider').start();
 });
 
 /************ Project popup management **************/

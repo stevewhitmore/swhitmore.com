@@ -57,7 +57,7 @@
             <h2>Personal Projects</h2>
             <p class="intro">I've really enjoyed working on these projects. The collection below is a bit eclectic since it ranges from WordPress to an assembler written in C. There are too many interesting areas of our field to narrow them down to just one!</p>
     <?php
-        require_once('inc/Thumb.php');
+        require_once('./inc/Thumb.php');
         foreach($thumbs as $thumb) {
             $vf = $thumb->name == 'APFED';
             if($vf) { ?>
@@ -107,8 +107,8 @@
             <ul></ul>
         </div>
         <a href="" target="_blank"></a>
-        <span id="prev"><img src="images/arrow-prev.png" /></span>
-        <span id="next"><img src="images/arrow-next.png" /></span>
+        <span id="prev"><img src="./images/arrow-prev.png" /></span>
+        <span id="next"><img src="./images/arrow-next.png" /></span>
         <span id="close"></span>
     </div>
 </div>
