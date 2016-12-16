@@ -1,5 +1,4 @@
 
-
 // Smooth scroll down on click 'see portfolio'
 $("#down").click(function() {
     $('html, body').animate({
@@ -8,58 +7,52 @@ $("#down").click(function() {
 });
 
 
+var $projPop = $(projPop),
+    $popInner = $(popInner),
+    activePop;
+
 // Reveal relevant popup
 $('.proj-thumb').click(function() {
-    var id = $(this).parents().attr('id'),
-        i;
-    for(i = 0; i < allPopups.length; i++) {
+    let id = $(this).parents().attr('id');
+    for(let i = 0; i < allPopups.length; i++) {
         if(id === allPopups[i].htmlID) {
-            allPopups[i].fillContent();
+            activePop = allPopups[i];
+            activePop.fillContent();
+            $projPop.fadeIn();
         }
     }
 });
 
 // Hide relevant popup
 $('#close').click(function() {
-    $('#proj-pop').hide();
-    $('#pop-content ul').html('');
+    $('#proj-pop').fadeOut();
 });
-$('#proj-pop').click(function() {
-    $(this).hide();
-    $('#pop-content ul').html('');
+$(projPop).click(function() {
+    $(this).fadeOut();
 });
-$('#pop-inner').click(function(e) {
+$popInner.click(function(e) {
     e.stopPropagation();
 });
 
 // Scroll through popups
 function scrollProjects(el) {
-    let $el = $('.' + el),
-        dir = 1, // tells us where to go at the end of a project section
-        go;
-    $el.click(function() {
-        let $proj = $(this).closest('.project');
-        // hide current popup
-        $proj.find('.proj-pop').fadeOut();
-        // figure out which way to go
-        if(el === 'next') {
-            go = $proj.next();
+    $('#' + el).click(function() {
+        $popInner.hide();
+        var dir = (el === 'next' ? 1 : -1),
+            index = allPopups.indexOf(activePop) + dir,
+            length = allPopups.length;
+        if(index >= 0 && index < length) {
+            activePop = allPopups[index];
         } else {
-            go = $proj.prev();
-            dir = 0;
-        }
-        // if we reach the end of VisFire or Personal sections, jump to the other one
-        if(!go.find('.proj-pop').length) {
-            $sec = $proj.closest('.folio-outer').siblings();
-            if(dir) {
-                $proj = $sec.find('.project').first();
-            } else {
-                $proj = $sec.find('.project').last();
+            if(index < 0) {
+                activePop = allPopups[length - 1];
             }
-            $proj.find('.proj-pop').fadeIn();
-        } else {
-            go.find('.proj-pop').fadeIn();
+            if(index > length - 1) {
+                activePop = allPopups[0];
+            }
         }
+        activePop.fillContent();
+        $popInner.fadeIn();
     });
 }
 scrollProjects('next');

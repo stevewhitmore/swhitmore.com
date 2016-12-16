@@ -1,3 +1,7 @@
+/*
+    ES6 style of creating popup objects. I think it's important for any front end developer to have a solid understanding of vanilla javascript, even if in most cases we usually use jQuery or some other library.
+*/
+
 class Popup {
     constructor(url, projName, htmlID, respLabel) {
         this.url = url || '#';
@@ -7,19 +11,16 @@ class Popup {
         this.viewText = 'View live project';
         this.contnt = '';
         this.lis = [];
-        count++;
         allPopups.push(this);
-        ul.innerHTML = '';
     }
 
     fillContent() {
-        projPop.style.display = 'block';
         // populate popup div
         h2.innerHTML = this.projName;
         p.innerHTML = this.contnt;
         span.innerHTML = this.respLabel;
-        popContent.appendChild(ul);
-        var li,
+        ul.innerHTML = '';
+        let li,
             item;
         for(item of this.lis) {
             li = document.createElement('li');
@@ -41,9 +42,7 @@ var projPop = document.getElementById('proj-pop'),
     span = document.getElementById('my-resp'),
     p = popContent.getElementsByTagName('p')[0],
     ul = popContent.getElementsByTagName('ul')[0],
-    link = popInner.getElementsByTagName('a')[0];
-
-var count = 0,
+    link = popInner.getElementsByTagName('a')[0],
     allPopups = [];
 
 // define projects and their properties
