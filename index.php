@@ -55,7 +55,7 @@
 <section id="portfolio">
         <div class="folio-inner">
             <h2>Personal Projects</h2>
-            <p class="intro">I've really enjoyed working on these projects. The collection below is a bit eclectic since it ranges from WordPress to an assembler written in C. There are too many interesting areas of our field to narrow them down to just one!</p>
+            <p class="intro">I've really enjoyed working on these projects. The collection below is a bit eclectic since it ranges from WordPress projects to an image processing program written in C++.</p>
     <?php
         require_once('./inc/Thumb.php');
         foreach($thumbs as $thumb) {

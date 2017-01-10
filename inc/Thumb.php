@@ -19,7 +19,6 @@ $netnotes = new Thumb('Netnotes');
 $subrbn = new Thumb('Suburban B\'s');
 $java = new Thumb('Java');
 $hands = new Thumb('hands');
-$assembler = new Thumb('Assembler');
 $apfed = new Thumb('APFED');
 $pag = new Thumb('PAG');
 $itsec = new Thumb('itsec');
@@ -37,7 +36,7 @@ $eye->name = "Eye Consultants of Atlanta";
 $rmc->name = "BMWCCA: RMC";
 
 // add all Project objects to array to be used in index.php
-array_push($thumbs, $netnotes, $subrbn, $java, $hands, $assembler, $apfed,
+array_push($thumbs, $netnotes, $subrbn, $java, $hands, $apfed,
     $pag, $itsec, $eye, $rmc, $bw);
 
 

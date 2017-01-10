@@ -237,7 +237,7 @@ span#close {
     right: -12px;
     cursor: pointer;
     font-size: 25px;
-    border-radius: 100%;
+    border-radius: 100px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     z-index: 9999;
     width: 30px;
@@ -328,7 +328,7 @@ section#testimonials span a {
 nav.unslider-nav {
     position: absolute;
     bottom: 15px;
-    left: 48%;
+    left: 47.5%;
     z-index: 99;
 }
 .unslider-nav ol li.unslider {
@@ -369,7 +369,7 @@ footer span {
         display: block;
     }
     .proj-thumb:hover .proj-title {
-        top: 110%;
+        opacity: 0;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;

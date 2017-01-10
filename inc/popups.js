@@ -47,9 +47,9 @@ var projPop = document.getElementById('proj-pop'),
 
 // define projects and their properties
 var netnotes = new Popup('../netnotes/', 'Netnotes', 'netnotes');
-netnotes.contnt = 'A simple web based note taking app to demonstrate some DOM manipulation using jQuery.';
+netnotes.contnt = 'The frontend build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
 netnotes.respLabel = 'Features:';
-netnotes.lis = ['Clean and minimalist interface', 'Responsive styling', 'Built with modularity and scalability in mind'];
+netnotes.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
 netnotes.viewText = 'View live demo';
 
 var subrbn = new Popup('http://www.suburban-bees.com/', 'Suburban B\'s', 'suburban');
@@ -58,6 +58,7 @@ subrbn.lis = ['Adding custom features to better fit their needs', 'Moving them t
 
 var eval = new Popup('https://github.com/stevewhitmore/equation-eval', 'Equation Eval', 'java');
 eval.contnt = 'This small Java project reads lines from a file that contains logical equations, parses them, analyzes them and checks their validity, then builds graphs representing their dependency on each other. The two kinds of graphs are a dependency graph and an adjacency list.';
+eval.respLabel = 'Demonstrates:';
 eval.lis = ['Different methods of representing relationships through different graphing techniques', 'Object Oriented Programming', 'Recursion in practice', 'Interpreting meaningful data from input files'];
 eval.viewText = 'View on GitHub';
 
@@ -66,12 +67,6 @@ hands.contnt = 'This program is a demonstration of C++ knowledge through an imag
 hands.respLabel = 'Demonstrates:';
 hands.lis = ['Compartmentalization of all classes involved', 'The use of pointers for different data types', 'How Makefiles make compiling and running programs much easier', 'The use of C++ for real world problem solving'];
 hands.viewText = 'View on GitHub';
-
-var assembler = new Popup('https://github.com/stevewhitmore/assembler', 'Assembler', 'assembler');
-assembler.contnt = 'One of my favorite classes I\'ve taken as a Computer Science student, Computer Organization and Architecture, had us build an assembler in C for the LC3 assembly language. I enjoyed it so much I decided to include it here along with my personal projects';
-assembler.respLabel = 'Demonstrates:';
-assembler.lis = ['How to translate an assembly language to binary code', 'How to do simple file I/O in C', 'How to decompose functionality into smaller pieces', 'Practice working with structures and pointers', 'Practice working on a larger project', 'Practice integrating new work into existing code'];
-assembler.viewText = 'View on GitHub';
 
 var apfed = new Popup('http://apfed.org', 'American Partnership of Eosinophilic Disorders (APFED)', 'apfed');
 apfed.contnt = 'APFED is an organization dedicated to spreading information about eosinophil-associated diseases. They do everything they can to help those suffering from these conditions and their families, including fund raising, volunteer work, education, research, and advocacy.';
