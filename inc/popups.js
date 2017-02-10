@@ -70,7 +70,7 @@ hands.viewText = 'View on GitHub';
 
 var apfed = new Popup('http://apfed.org', 'American Partnership of Eosinophilic Disorders (APFED)', 'apfed');
 apfed.contnt = 'APFED is an organization dedicated to spreading information about eosinophil-associated diseases. They do everything they can to help those suffering from these conditions and their families, including fund raising, volunteer work, education, research, and advocacy.';
-apfed.lis = ['Help with implementation of the Doctor Finder, an advanced search filtration system to help users find the health care they need', 'Integration with 3rd party software dedicated to gathering financial support for their cause (SALSA)', 'Adding other custom features', 'Responsive styling fixes and tweaks', 'Site wide content updates', 'Continuing support for the product (front and back end)', 'Regular WordPress and plugin updates'];
+apfed.lis = ['Help with implementation of the Doctor Finder, an advanced search filtration system to help users find the health care they need<', 'Integration with 3rd party software dedicated to gathering financial support for their cause (SALSA)', 'Adding other custom features', 'Responsive styling fixes and tweaks', 'Site wide content updates', 'Continuing support for the product (front and back end)', 'Regular WordPress and plugin updates'];
 
 var pag = new Popup('http://precisionaviationgroup.com', 'Precision Aviation Group (PAG)', 'pag');
 pag.contnt = 'PAG is an international aviation MRO (maintenance, repair, and overhaul) company spanning across the globe. It\'s made up of 12 companies, so VisFire had the unique challange of combining 12 company websites into one.';

@@ -32,7 +32,7 @@ a, a:hover, a:link, a:visited {
     text-decoration: none;
 }
 
-header {
+#wrap {
     width: 100%;
     min-height: 100%;
     background: #5A8AC9;
@@ -43,12 +43,12 @@ header {
     cursor: default;
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 7em;
+    padding: 7em 0;
     height: auto;
 }
 .main-content p {
     margin: 0 auto;
-    width: 380px;
+    width: 375px;
     text-align: center;
     font-size: 18px;
     line-height: 26px;
@@ -63,7 +63,7 @@ header {
 	border-radius: 100px;
 }
 
-#header-lower {
+#lower {
     position: absolute;
     bottom: 20px;
     right: inherit;
@@ -73,13 +73,12 @@ header {
     padding: 0px;
     text-align: center;
 }
-#header-lower #social-wrap {
+#lower #social-wrap {
     float: right;
     margin-right: 20px;
     width: 165px;
 }
-#header-lower a,
-span#down {
+#lower a {
     color: #4a6588;
     position: relative;
     display: inline-block;
@@ -88,279 +87,14 @@ span#down {
     height: auto;
     padding: 0px;
 }
-span#down {
-    margin: 70px 0 45px;
-    width: 100%;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-}
 i.fa {
     font-size: 3em;
-}
-
-/* Portfolio section */
-section#portfolio {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1300px;
-    background: #fff;
-}
-section#portfolio h2,
-.pop-inner h2,
-.folio-inner p,
-footer {
-    color: #4a6588;
-}
-section#portfolio h2,
-.pop-inner h2 {
-    width: auto;
-    margin: 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    font-size: 25px;
-}
-#visfire h2 a {
-    color: #f18851;
-}
-.folio-inner {
-    margin-bottom: 25px;
-    overflow: hidden;
-}
-.folio-inner p.intro {
-    margin: 0 0 2em;
-}
-.project {
-    width: 33.3%;
-    float: left;
-}
-.proj-thumb {
-    margin: 0 auto 10px;
-    width: 98%;
-    overflow: hidden;
-    cursor: pointer;
-}
-.proj-thumb,
-.pop-inner {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-.proj-thumb.left,
-.proj-thumb.left {
-    float: left;
-}
-.proj-thumb.right,
-.proj-thumb.right {
-    float: right;
-}
-.proj-thumb img {
-    display: block;
-    width: 100%;
-}
-.proj-title {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-    box-sizing: border-box;
-    transition: top 0.7s ease-in;
-    z-index: 2;
-}
-.proj-title p {
-    padding: 24% 0 0;
-    text-align: center;
-    color: #fff;
-}
-
-/* Portfolio popup */
-#proj-pop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(75,75,75,0.7);
-    z-index: 99;
-}
-.pop-inner {
-    position: relative;
-    margin: 100px auto;
-    width: 85%;
-    max-width: 800px;
-    height: 470px;
-    color: #4b4b4b;
-    background-color: #fff;
-    border: 1px solid #5A8AC9;
-}
-.pop-inner:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 2em;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.1;
-    background-image: url('../images/wp-logo.png');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    -ms-background-size: initial;
-    -o-background-size: initial;
-    -moz-background-size: initial;
-    -webkit-background-size: initial;
-    background-size: initial;
-}
-#bimmerworld:before {
-    background-image: url('../images/netsuite.png');
-}
-#netnotes:before {
-    background-image: url('../images/jquery.png');
-}
-#java:before {
-    background-image: url('../images/java-logo.png');
-}
-#hands:before {
-    background-image: url('../images/cpp.png');
-}
-#assembler:before {
-    background-image: url('../images/clang.png');
-}
-span#close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    cursor: pointer;
-    font-size: 25px;
-    border-radius: 100px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    width: 30px;
-    height: 30px;
-    background: url('../images/close.png') no-repeat center #fff;
-}
-.pop-inner h2 {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-#pop-content {
-    padding: 0 35px;
-    border: 1px solid transparent;
-}
-#pop-content p {
-    padding: 10px 0;
-}
-#pop-content span {
-    display: block;
-    margin: 1em 4em 0;
-}
-#pop-content ul {
-    margin: 0.5em 0 5em 6em;
-}
-#pop-content ul li {
-    padding: 2px;
-}
-
-.pop-inner a {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 15px;
-    color: #f18851;
-    z-index: 9999;
-}
-#prev,
-#next {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 100%;
-    z-index: 9998;
-    cursor: pointer;
-}
-#prev img,
-#next img {
-    position: absolute;
-    display: block;
-    top: 42%;
-    left: 0;
-    opacity: 0.5;
-}
-#next,
-#next img {
-    left: inherit;
-    right: 0;
-}
-
-/* Testimonials section */
-section#testimonials {
-    height: 300px;
-    background-color: #4b4b4b;
-    color: #fff;
-}
-section#testimonials ul.unslider-wrap {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1300px;
-}
-section#testimonials p,
-section#testimonials span {
-    padding: 2em 0 0.5em;
-    line-height: 26px;
-    border-bottom: 1px solid #4a6588;
-}
-section#testimonials q {
-    font-style: italic;
-}
-section#testimonials span {
-    display: block;
-    padding: 0.5em 0 2em;
-    text-align: right;
-    border-bottom: none;
-}
-section#testimonials span a {
-    font-size: 14px;
-}
-
-nav.unslider-nav {
-    position: absolute;
-    bottom: 15px;
-    left: 47.5%;
-    z-index: 99;
-}
-nav.unslider-nav ol li.unslider {
-    border: 2px solid #eee;
-}
-nav.unslider-nav ol li.unslider-active {
-    background: #eee;
-}
-li.testi-single {
-    margin-top: 3%;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    cursor: default;
-    background: #eee;
-    height: 100px;
-}
-footer span {
-    margin-top: 45px;
-    width: 100%;
-    float: left;
 }
 
 /* Desktop styles only */
 @media screen and (min-width:1024px) {
 	a:hover,
-    #header-lower a:hover,
+    #lower a:hover,
     span#down:hover {
 	    color: #f18851;
         -webkit-transition: all 0.5s ease;
@@ -393,13 +127,13 @@ footer span {
     .main-content {
         padding-top: 4em;
     }
-    #header-lower {
+    #lower {
         position: relative;
         bottom: inherit;
         right: inherit;
         padding: 0 0 50px 0;
     }
-    #header-lower #social-wrap {
+    #lower #social-wrap {
         float: none;
         margin: 50px auto 0;
     }
