@@ -32,20 +32,20 @@
         <div class='me-image'>
             <img src='./images/me.png' alt='steve whitmore cartoonized headshot'>
         </div>
-        <h1><a href="./inc/SteveWhitmoreResume.pdf">Steve Whitmore</a></h1>
+        <h1>Steve Whitmore</h1>
         <p>Code Enthusiast + Full Stack Web Developer + IT Guy at <a href="https://motionconstrained.com" target="_blank">Motion Constrained</a></p>
     </div>
 
     <div id="lower">
         <div id="social-wrap">
-            <a class="social" href='https://github.com/stevewhitmore' target='_blank'>
-                <i class='fa fa-github-square' aria-hidden='true'></i>
+            <a href='https://github.com/stevewhitmore' target='_blank'>
+              <i class='fa fa-github-square' aria-hidden='true'></i>
             </a>
-            <a class="social" href='https://www.linkedin.com/in/steve-whitmore' target='_blank'>
-                <i class='fa fa-linkedin-square' aria-hidden='true'></i>
+            <a href='https://www.linkedin.com/in/steve-whitmore' target='_blank'>
+              <i class='fa fa-linkedin-square' aria-hidden='true'></i>
             </a>
-            <a class="social" href='mailto:steve@swhitmore.com'>
-                <i class='fa fa-envelope-square' aria-hidden='true'></i>
+            <a href='mailto:steve@swhitmore.com'>
+              <i class='fa fa-envelope-square' aria-hidden='true'></i>
             </a>
         </div>
     </div>

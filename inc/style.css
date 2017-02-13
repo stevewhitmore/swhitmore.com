@@ -26,7 +26,7 @@ h1 {
     margin: 20px 0;
 }
 a {
-    color: #fff;
+    color: #f18851;
 }
 a, a:hover, a:link, a:visited {
     text-decoration: none;
@@ -93,9 +93,8 @@ i.fa {
 
 /* Desktop styles only */
 @media screen and (min-width:1024px) {
-	a:hover,
-    #lower a:hover,
-    span#down:hover {
+
+    #lower a:hover {
 	    color: #f18851;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
