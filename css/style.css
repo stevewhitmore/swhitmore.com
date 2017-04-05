@@ -1,0 +1,549 @@
+/**
+	Author: Steve Whitmore
+	URL: http://swhitmore.com
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    position: relative;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+}
+h1 {
+    font-weight: 200;
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 0;
+}
+a {
+    color: #80B241;
+}
+a, a:hover, a:link, a:visited {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    min-height: 100%;
+    background: #304556;
+    color: #fff;
+}
+
+.main-content {
+    cursor: default;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 7em;
+    height: auto;
+}
+.main-content p {
+    margin: 0 auto;
+    width: 395px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+}
+.me-image {
+	margin: 0 auto;
+	width: 200px;
+}
+.me-image img {
+	margin: 0 auto;
+	max-width: 100%;
+	border-radius: 100px;
+}
+
+#header-lower {
+    position: absolute;
+    bottom: 20px;
+    right: inherit;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    text-align: center;
+}
+#header-lower #social-wrap {
+    float: right;
+    margin-right: 20px;
+    width: 165px;
+}
+#header-lower a,
+#down {
+    color: #737b86;
+    position: relative;
+    display: inline-block;
+    margin: 0px 5px;
+    width: auto;
+    height: auto;
+    padding: 0px;
+}
+#down {
+    margin: 70px 0 45px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+#down span {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #304556;
+    background-color: #737b86;
+}
+i.fa {
+    font-size: 3em;
+}
+
+section#specialties {
+    width: 100%;
+    text-align: center;
+    background-color: #eee;
+    overflow: hidden;
+}
+section#specialties img {
+    max-width: 100%;
+}
+
+/* Portfolio section */
+section#portfolio {
+    background-color: rgba(123, 123, 123, 0.5);
+}
+section#portfolio::after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../images/circuits2.jpeg);
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    z-index: -1;
+}
+section#portfolio h2,
+.pop-inner h2,
+.folio-inner p,
+footer {
+    color: #353C45;
+}
+section#portfolio h2,
+.pop-inner h2 {
+    width: auto;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #353C45;
+    font-size: 25px;
+}
+.folio-inner {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 90%;
+    max-width: 1300px;
+    overflow: hidden;
+}
+.folio-inner p.intro {
+    margin: 0 0 2em;
+}
+.project {
+    width: 33.3%;
+    float: left;
+}
+.proj-thumb {
+    margin: 0 auto 10px;
+    width: 98%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.proj-thumb,
+.pop-inner {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.proj-thumb.left,
+.proj-thumb.left {
+    float: left;
+}
+.proj-thumb.right,
+.proj-thumb.right {
+    float: right;
+}
+.proj-thumb img {
+    display: block;
+    width: 100%;
+}
+.proj-title {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    transition: top 0.7s ease-in;
+    z-index: 2;
+}
+.proj-title p {
+    padding: 24% 0 0;
+    text-align: center;
+    color: #fff;
+}
+
+/* Portfolio popup */
+#proj-pop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75,75,75,0.7);
+    z-index: 99;
+}
+.pop-inner {
+    position: relative;
+    margin: 100px auto;
+    width: 85%;
+    max-width: 800px;
+    height: 470px;
+    color: #4b4b4b;
+    background-color: #fff;
+    border: 1px solid #5A8AC9;
+}
+.pop-inner:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+    background-image: url('../images/wp-logo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: initial;
+    -o-background-size: initial;
+    -moz-background-size: initial;
+    -webkit-background-size: initial;
+    background-size: initial;
+}
+#bimmerworld:before {
+    background-image: url('../images/netsuite.png');
+}
+#netnotes:before {
+    background-image: url('../images/jquery.png');
+}
+#java:before {
+    background-image: url('../images/java-logo.png');
+}
+#hands:before {
+    background-image: url('../images/cpp.png');
+}
+#assembler:before {
+    background-image: url('../images/clang.png');
+}
+span#close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    background: url('../images/close.png') no-repeat center #fff;
+}
+.pop-inner h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#pop-content {
+    padding: 0 35px;
+    border: 1px solid transparent;
+}
+#pop-content p {
+    padding: 10px 0;
+}
+#pop-content span {
+    display: block;
+    margin: 1em 4em 0;
+}
+#pop-content ul {
+    margin: 0.5em 0 5em 6em;
+}
+#pop-content ul li {
+    padding: 2px;
+}
+
+.pop-inner #credit,
+.pop-inner a,
+#cred-expln {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    z-index: 9999;
+}
+.pop-inner #credit,
+#cred-expln {
+    right: inherit;
+    left: 0;
+    line-height: 0px;
+    font-size: 25px;
+    color: #f18851;
+    font-weight: bold;
+    cursor: default;
+}
+#cred-expln {
+    left: inherit;
+    right: 0;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.5);
+}
+.pop-inner #credit,
+#cred-expln a {
+    color: #80B241;
+}
+#prev,
+#next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 100%;
+    z-index: 9998;
+    cursor: pointer;
+}
+#prev img,
+#next img {
+    position: absolute;
+    display: block;
+    top: 42%;
+    left: 0;
+    opacity: 0.5;
+}
+#next,
+#next img {
+    left: inherit;
+    right: 0;
+}
+
+/* Testimonials section */
+section#testimonials {
+    height: 300px;
+    background-color: #353C45;
+    color: #fff;
+}
+section#testimonials p,
+section#testimonials span {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0 0.5em;
+    line-height: 26px;
+    border-bottom: 1px solid #80B241;
+}
+section#testimonials q {
+    font-style: italic;
+}
+section#testimonials span {
+    display: block;
+    padding: 0.5em 0 2em;
+    text-align: right;
+    border-bottom: none;
+}
+section#testimonials span a {
+    font-size: 14px;
+}
+
+nav.unslider-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 47.5%;
+    z-index: 99;
+}
+.unslider-nav ol li.unslider {
+    border: 2px solid #eee;
+}
+.unslider-nav ol li.unslider-active {
+    background: #eee;
+}
+li.testi-single {
+    margin-top: 3%;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    cursor: default;
+    background: #eee;
+    height: 100px;
+}
+footer span {
+    margin-top: 45px;
+    width: 100%;
+    float: left;
+}
+
+/* Desktop styles only */
+@media screen and (min-width:1024px) {
+	a:hover,
+    #header-lower a:hover,
+    #down span:hover{
+	    color: #80B241;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+	}
+    #down span:hover {
+        background-color: #80B241;
+        color: #304556;
+    }
+    .proj-title {
+        display: block;
+    }
+    .proj-thumb:hover .proj-title {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    #prev:hover img,
+    #next:hover img {
+        opacity: 1;
+    }
+    span#close:hover {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    }
+}
+@media screen and (max-width:900px) {
+    .main-content {
+        padding-top: 4em;
+    }
+    #header-lower {
+        position: relative;
+        bottom: inherit;
+        right: inherit;
+        padding: 0 0 50px 0;
+    }
+    #header-lower #social-wrap {
+        float: none;
+        margin: 50px auto 0;
+    }
+    #down {
+        margin: 70px 0 0;
+    }
+    .pop-inner {
+        margin: 20px auto;
+        height: auto;
+    }
+}
+@media screen and (max-width:850px) {
+    .project {
+        width: 50%;
+    }
+    #portfolio .pop-inner h2 {
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    #pop-content {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+    .pop-inner {
+        height: 325px;
+    }
+    #pop-content span {
+        margin-left: 0em;
+    }
+    #pop-content p {
+        padding: 0;
+    }
+    #pop-content ul {
+        margin-left: 1em;
+    }
+    #prev img {
+        left: -23px;
+    }
+    #next img {
+        right: -23px;
+    }
+    section#testimonials {
+        height: 350px;
+    }
+}
+@media screen and (max-width:650px) {
+    section#testimonials p {
+        padding-top: 0;
+    }
+}
+@media screen and (max-width:600px) {
+    section#testimonials {
+        height: 450px;
+    }
+}
+@media screen and (max-width:500px) {
+    .project {
+        float: none;
+        margin: 0 auto;
+        width: 70%;
+    }
+    .pop-inner {
+        height: auto;
+    }
+}
+@media screen and (max-width:430px) {
+	h1 {
+		font-size: 44px;
+		margin: 25px 0;
+	}
+    .main-content p {
+        width: 338px;
+        font-size: 16px;
+    }
+    .project {
+        width: 95%;
+    }
+    .pop-inner {
+        margin: 10px auto;
+    }
+    section#testimonials {
+        height: 500px;
+    }
+}
+@media screen and (max-width:350px) {
+    section#specialties {
+        display: none;
+    }
+}
+@media screen and (max-width:320px) {
+	section {
+		padding: 50px 10px;
+	}
+	.me-image {
+		width: 160px;
+	}
+	h1 {
+		font-size: 41px;
+	}
+}

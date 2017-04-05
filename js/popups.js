@@ -8,6 +8,7 @@ class Popup {
         this.projName = projName || 'Untitled Project';
         this.htmlID = htmlID || 'noID';
         this.respLabel = respLabel || 'Some of my responsibilities included:';
+        this.creds = "*";
         this.viewText = 'View live project';
         this.contnt = '';
         this.lis = [];
@@ -20,6 +21,7 @@ class Popup {
         p.innerHTML = this.contnt;
         span.innerHTML = this.respLabel;
         ul.innerHTML = '';
+        credit.innerHTML = this.creds;
         let li,
             item;
         for(item of this.lis) {
@@ -38,6 +40,7 @@ class Popup {
 var projPop = document.getElementById('proj-pop'),
     popInner = document.getElementsByClassName('pop-inner')[0],
     popContent = document.getElementById('pop-content'),
+    credit = document.getElementById('credit'),
     h2 = popInner.getElementsByTagName('h2')[0],
     span = document.getElementById('my-resp'),
     p = popContent.getElementsByTagName('p')[0],
@@ -46,26 +49,36 @@ var projPop = document.getElementById('proj-pop'),
     allPopups = [];
 
 // define projects and their properties
+var mc = new Popup('https://motionconstrained.com', 'Motion Constrained', 'mc');
+mc.contnt = 'The frontend build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
+mc.respLabel = 'Features:';
+mc.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
+mc.creds = "";
+
 var netnotes = new Popup('../netnotes/', 'Netnotes', 'netnotes');
 netnotes.contnt = 'The frontend build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
 netnotes.respLabel = 'Features:';
 netnotes.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
+netnotes.creds = "";
 netnotes.viewText = 'View live demo';
 
 var subrbn = new Popup('http://www.suburban-bees.com/', 'Suburban B\'s', 'suburban');
 subrbn.contnt = 'I was lucky enough to start working with Suburban B\'s right around the time they came onto the scene. Since starting with them I\'ve watched them grow and become featured on prominent websites such as the Pollinate Media Group and the Interior Design Society.';
 subrbn.lis = ['Adding custom features to better fit their needs', 'Moving them to a new hosting environment to help facilitate their growth', 'Client training via video creation', 'Continuing support for the product (front and back end)', 'Regular WordPress and plugin updates']
+subrbn.creds = "";
 
 var eval = new Popup('https://github.com/stevewhitmore/equation-eval', 'Equation Eval', 'java');
 eval.contnt = 'This small Java project reads lines from a file that contains logical equations, parses them, analyzes them and checks their validity, then builds graphs representing their dependency on each other. The two kinds of graphs are a dependency graph and an adjacency list.';
 eval.respLabel = 'Demonstrates:';
 eval.lis = ['Different methods of representing relationships through different graphing techniques', 'Object Oriented Programming', 'Recursion in practice', 'Interpreting meaningful data from input files'];
+eval.creds = "";
 eval.viewText = 'View on GitHub';
 
 var hands = new Popup('https://github.com/stevewhitmore/human-hands', 'Human Hands', 'hands');
 hands.contnt = 'This program is a demonstration of C++ knowledge through an image comparison program. It analyzes and compares data captured from 3-dimensional images of a human hand represented by bit values in pgm files.';
 hands.respLabel = 'Demonstrates:';
 hands.lis = ['Compartmentalization of all classes involved', 'The use of pointers for different data types', 'How Makefiles make compiling and running programs much easier', 'The use of C++ for real world problem solving'];
+hands.creds = "";
 hands.viewText = 'View on GitHub';
 
 var apfed = new Popup('http://apfed.org', 'American Partnership of Eosinophilic Disorders (APFED)', 'apfed');

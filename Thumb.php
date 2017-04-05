@@ -15,6 +15,7 @@ class Thumb {
 
 // create Thumb objects to populate portfolio section
 $thumbs = array();
+$mc = new Thumb("Motion Constrained");
 $netnotes = new Thumb('Netnotes');
 $subrbn = new Thumb('Suburban B\'s');
 $java = new Thumb('Java');
@@ -28,6 +29,8 @@ $bw = new Thumb("Bimmerworld");
 
 // thumb object modifications
 $subrbn->imgUrl = './images/' . substr($subrbn->id, 0, -4) . '.jpg';
+// $mc->id = 'mc';
+// $mc->imgUrl = './images/' . $mc->id . '.jpg';
 $subrbn->id = 'suburban';
 $java->name = 'Equation Eval';
 $hands->name = 'Human Hands';
