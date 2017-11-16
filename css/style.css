@@ -43,7 +43,7 @@ a, a:hover, a:link, a:visited {
     text-decoration: none;
 }
 
-header {
+section#main {
     width: 100%;
     min-height: 100%;
     background: #304556;
