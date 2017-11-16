@@ -17,7 +17,7 @@ class Popup {
 
     fillContent() {
         // populate popup div
-        h2.innerHTML = this.projName;
+        h3.innerHTML = this.projName;
         p.innerHTML = this.contnt;
         span.innerHTML = this.respLabel;
         ul.innerHTML = '';
@@ -41,7 +41,7 @@ var projPop = document.getElementById('proj-pop'),
     popInner = document.getElementsByClassName('pop-inner')[0],
     popContent = document.getElementById('pop-content'),
     credit = document.getElementById('credit'),
-    h2 = popInner.getElementsByTagName('h2')[0],
+    h3 = popInner.getElementsByTagName('h3')[0],
     span = document.getElementById('my-resp'),
     p = popContent.getElementsByTagName('p')[0],
     ul = popContent.getElementsByTagName('ul')[0],
@@ -50,22 +50,26 @@ var projPop = document.getElementById('proj-pop'),
 
 // define projects and their properties
 var mc = new Popup('https://motionconstrained.com', 'Motion Constrained', 'mc');
-mc.contnt = 'The frontend build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
-mc.respLabel = 'Features:';
-mc.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
+mc.contnt = 'As one of the few companies in the United States that offers authentic Hiwin linear motion products, Motion Constrained specializes in the sale and distribution of a variety of machine parts for automation.';
+mc.lis = ['Monitor and manage website sales, security, and general activity', 'SEO and speed optimization', 'Code refactoring', 'Clean and modern redesign', 'Responsive styling fixes'];
 mc.creds = "";
 
-var netnotes = new Popup('../netnotes/', 'Netnotes', 'netnotes');
-netnotes.contnt = 'The frontend build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
-netnotes.respLabel = 'Features:';
-netnotes.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
-netnotes.creds = "";
-netnotes.viewText = 'View live demo';
+var escape = new Popup('https://escape.place', 'ConTRAPtions', 'contraptions');
+escape.contnt = 'These guys combine the creative power of an artist and a machanical engineer to bring to life a very exciting and unique escape room experience. It has consistently been rated one of the top escape rooms in northern Colorado and has been featured on several major news outlets.';
+escape.lis = ['Monitor and manage website security and activity', 'SEO and speed optimization', 'Clean and modern redesign', 'Responsive styling fixes'];
+escape.creds = "";
 
 var subrbn = new Popup('http://www.suburban-bees.com/', 'Suburban B\'s', 'suburban');
 subrbn.contnt = 'I was lucky enough to start working with Suburban B\'s right around the time they came onto the scene. Since starting with them I\'ve watched them grow and become featured on prominent websites such as the Pollinate Media Group and the Interior Design Society.';
 subrbn.lis = ['Adding custom features to better fit their needs', 'Moving them to a new hosting environment to help facilitate their growth', 'Client training via video creation', 'Continuing support for the product (front and back end)', 'Regular WordPress and plugin updates']
 subrbn.creds = "";
+
+var netnotes = new Popup('http://netnotes.swhitmore.com', 'Netnotes', 'netnotes');
+netnotes.contnt = 'The front-end build of a simple web based note taking app using jQuery as the driving force of activity. Uses the new HTML5 attribute "contentEditable" rather than a textarea element.';
+netnotes.respLabel = 'Features:';
+netnotes.lis = ['Clean and minimalist interface', 'Sass (Syntactically Awesome Style Sheets)', 'Responsive styling', 'Built with modularity and scalability in mind'];
+netnotes.creds = "";
+netnotes.viewText = 'View live demo';
 
 var eval = new Popup('https://github.com/stevewhitmore/equation-eval', 'Equation Eval', 'java');
 eval.contnt = 'This small Java project reads lines from a file that contains logical equations, parses them, analyzes them and checks their validity, then builds graphs representing their dependency on each other. The two kinds of graphs are a dependency graph and an adjacency list.';

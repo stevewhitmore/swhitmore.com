@@ -3,11 +3,13 @@
 class Thumb {
     public $name;
     public $id;
+    public $alt;
     public $imgUrl = './images/';
 
     public function __construct($name) {
       $this->id = strtolower($name);
       $this->name = $name;
+      $this->alt = $name;
       $this->imgUrl .= $this->id . '.jpg';
     }
 
@@ -15,8 +17,9 @@ class Thumb {
 
 // create Thumb objects to populate portfolio section
 $thumbs = array();
-$mc = new Thumb("Motion Constrained");
 $netnotes = new Thumb('Netnotes');
+$mc = new Thumb("Motion Constrained");
+$escape = new Thumb("ConTRAPtions");
 $subrbn = new Thumb('Suburban B\'s');
 $java = new Thumb('Java');
 $hands = new Thumb('hands');
@@ -29,8 +32,8 @@ $bw = new Thumb("Bimmerworld");
 
 // thumb object modifications
 $subrbn->imgUrl = './images/' . substr($subrbn->id, 0, -4) . '.jpg';
-// $mc->id = 'mc';
-// $mc->imgUrl = './images/' . $mc->id . '.jpg';
+$mc->id = 'mc';
+$mc->imgUrl = './images/' . $mc->id . '.jpg';
 $subrbn->id = 'suburban';
 $java->name = 'Equation Eval';
 $hands->name = 'Human Hands';
@@ -39,8 +42,8 @@ $eye->name = "Eye Consultants of Atlanta";
 $rmc->name = "BMWCCA: RMC";
 
 // add all Project objects to array to be used in index.php
-array_push($thumbs, $netnotes, $subrbn, $java, $hands, $apfed,
-    $pag, $itsec, $eye, $rmc, $bw);
+array_push($thumbs, $netnotes, $mc, $escape, $apfed,
+    $pag, $itsec, $eye, $rmc, $bw, $subrbn, $java, $hands);
 
 
 ?>

@@ -4,11 +4,10 @@
     <title>Steve Whitmore | Web Developer | Fort Collins, Colorado</title>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale = 1.0'>
-    <meta name='description' content='Steve Whitmore. Web Development'>
+    <meta name='description' content="Hi, I'm Steve Whitmore, a freelance web developer based out of Fort Collins, Colorado.">
     <meta name='keywords' content='web,developer,code,programmer,website,computer,student'>
     <meta name='author' content='Steve Whitmore'>
     <link rel='icon' type='image/png' href='favicon.png'>
-    <link type='text/css' rel='stylesheet' href='./css/font-awesome.css'>
     <link type='text/css' rel='stylesheet' href='./css/unslider.css'>
     <link type='text/css' rel='stylesheet' href='./css/style.css'>
 
@@ -34,41 +33,118 @@
             <img src="./images/me.png" alt="steve whitmore cartoonized headshot">
         </div>
         <h1>Steve Whitmore</h1>
-        <p>Code Enthusiast + Well Rounded Web Magician + IT Guy at <a href="https://motionconstrained.com" target="_blank">Motion Constrained</a></p>
+        <p>Code Enthusiast + Well Rounded Web Magician + Web Admin at <a href="https://motionconstrained.com" target="_blank">Motion Constrained</a></p>
     </div>
-    <div id="down"><span>see portfolio</span></div>
-    <div id="header-lower">
+    <div id="down">
+        <span id="port-jump">Portfolio</span>
+        <span id="skills-jump">Skillset</span>
         <div id="social-wrap">
-            <a class="social" href='https://github.com/stevewhitmore' target='_blank'>
-                <i class='fa fa-github-square' aria-hidden='true'></i>
-            </a>
-            <a class="social" href='https://www.linkedin.com/in/steve-whitmore' target='_blank'>
-                <i class='fa fa-linkedin-square' aria-hidden='true'></i>
-            </a>
-            <a class="social" href='mailto:steve@swhitmore.com'>
-                <i class='fa fa-envelope-square' aria-hidden='true'></i>
-            </a>
+            <a id="github" href='https://github.com/stevewhitmore' target='_blank'></a>
+            <a id="linkdin" href='https://www.linkedin.com/in/steve-whitmore' target='_blank'></a>
+            <a id="tel" href='tel:19702379599' target='_blank'></a>
+            <a id="mail" href='mailto:steve@swhitmore.com'></a>
         </div>
     </div>
 </header>
-<section id="portfolio">
+
+<section id="tabbed">
+    <input checked="checked" id="tab1" name="tabs" type="radio">
+    <label for="tab1">Portfolio</label>
+    <input id="tab2" name="tabs" type="radio">
+    <label for="tab2">Skillset</label>
+
+    <article class="tabbed-content" id="portfolio">
         <div class="folio-inner">
-    <?php
-        require_once('./Thumb.php');
-        foreach($thumbs as $thumb) {
-            $vf = $thumb->name == 'APFED'; ?>
-            <div class="project" id="<?php echo $thumb->id; ?>">
-                <div class="proj-thumb">
-                    <span class="proj-title">
-                        <p><?php echo $thumb->name; ?></p>
-                    </span>
-                    <img src="<?php echo $thumb->imgUrl; ?>" />
+            <?php
+            require_once('./Thumb.php');
+            foreach($thumbs as $thumb) { ?>
+                <div class="project" id="<?php echo $thumb->id; ?>">
+                    <div class="proj-thumb">
+                        <span class="proj-title">
+                            <p><?php echo $thumb->name; ?></p>
+                        </span>
+                        <img src="<?php echo $thumb->imgUrl; ?>" alt="<?php echo $thumb->alt ?>"/>
+                    </div>
                 </div>
+            <?php
+            } ?>
+            <div id="cred-expln"><a href="http://visfire.com"><span>*</span> VisFire project</a></div>
+        </div>
+    </article>
+    <article class="tabbed-content" id="skillset">
+        <div class="folio-inner">
+            <p>Below is a look at my skillset so you can get a better feel for what my strengths are and where I hope to grow.</p>
+            <p>3 - Ninja/Expert/Always improving<br/>2 - Pretty well versed<br/>1 - I've experimented but have a lot to explore</p>
+            <div class="category">
+                <h2>Front-end Development</h2>
+                <ul>
+                    <li>3 - HTML5</li>
+                    <li>3 - CSS3</li>
+                    <li>3 - JavaScript</li>
+                    <li>3 - jQuery</li>
+                    <li>3 - UI/UX Design</li>
+                    <li>2 - AngularJS</li>
+                    <li>2 - Sass</li>
+                    <li>2 - Adobe Photoshop/GIMP</li>
+                    <li>1 - Less.js</li>
+                    <li>1 - Adobe Illustrator</li>
+                    <li>1 - ReactJS</li>
+                </ul>
             </div>
-    <?php } ?>
-    <div id="cred-expln"><a href="http://visfire.com"><span>*</span> VisFire project</a></div>
-    </div>
+            <div class="category">
+                <h2>Back-end Development</h2>
+                <ul>
+                    <li>3 - PHP</li>
+                    <li>2 - Bash</li>
+                    <li>2 - NodeJS</li>
+                    <li>2 - MySQL</li>
+                    <li>1 - Django</li>
+                    <li>1 - RoR</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h2>Content Management Systems</h2>
+                <ul>
+                    <li>3 - WordPress</li>
+                    <li>3 - Magento</li>
+                    <li>2 - NetSuite</li>
+                    <li>2 - CS Cart</li>
+                    <li>2 - Drupal</li>
+                    <li>2 - ExpressionEngine</li>
+                    <li>1 - Joomla</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h2>Web/System Administration</h2>
+                <ul>
+                    <li>3 - Troubleshooting Issues</li>
+                    <li>3 - Customer Service</li>
+                    <li>3 - Communication</li>
+                    <li>3 - Unix/Linux</li>
+                    <li>3 - Apple OS X</li>
+                    <li>2 - Microsoft Windows</li>
+                    <li>2 - Security best practices</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h2>Other</h2>
+                <ul>
+                    <li>3 - Java</li>
+                    <li>3 - C/C++</li>
+                    <li>3 - Git</li>
+                    <li>2 - Assembly Language</li>
+                    <li>2 - Ruby</li>
+                    <li>2 - Python</li>
+                    <li>2 - Algorithm Optimization</li>
+                    <li>2 - Computer Architecture</li>
+                    <li>2 - Hardware Assembly</li>
+                </ul>
+            </div>
+            <a id="pdf" href="./SteveWhitmoreResume.pdf" target="_blank">View Full Resume (PDF)</a>
+        </div>
+    </article>
 </section>
+
 <section id="testimonials">
     <ul>
         <li class="testi-single">
@@ -92,7 +168,7 @@
 
 <div id="proj-pop">
     <div class="pop-inner" id="">
-        <h2></h2>
+        <h3></h3>
         <div id="pop-content">
             <p></p>
             <span id="my-resp"></span>
@@ -100,16 +176,15 @@
         </div>
         <a href="" target="_blank"></a>
         <span id="credit"></span>
-        <span id="prev"><img src="./images/arrow-prev.png" /></span>
-        <span id="next"><img src="./images/arrow-next.png" /></span>
+        <span id="prev"><img src="./images/arrow-prev.png" alt="previous arrow"/></span>
+        <span id="next"><img src="./images/arrow-next.png" alt="next arrow"/></span>
         <span id="close"></span>
     </div>
 </div>
 
-<script src="./js/jquery-3.1.1.min.js"></script>
-<script src="./js/unslider.min.js"></script>
-<script src="./js/popups.js"></script>
-<script src="./js/main.js"></script>
+<script defer src="./js/jquery-3.1.1.min.js"></script>
+<script defer src="./js/unslider.min.js"></script>
+<script defer src="./js/main.js"></script>
 
 
 <!--                                           .x+!?T!!+:.
