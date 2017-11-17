@@ -14,14 +14,14 @@
 <body>
 
 <section id="main">
-    <div class="main-content">
-        <div class="me-image">
+    <div id="tagline">
+        <div id="face">
             <img src="./images/me.png" alt="steve whitmore cartoonized headshot">
         </div>
         <h1>Steve Whitmore</h1>
         <p>Code Enthusiast + Well Rounded Web Magician + Developer at <a href="http://naic.org" target="_blank">NAIC</a></p>
     </div>
-    <div id="down">
+    <div id="contact">
         <div id="social-wrap">
             <a id="github" href='https://github.com/stevewhitmore' target='_blank'></a>
             <a id="linkdin" href='https://www.linkedin.com/in/steve-whitmore' target='_blank'></a>
