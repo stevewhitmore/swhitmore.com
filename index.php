@@ -5,7 +5,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale = 1.0'>
     <meta name='author' content='Steve Whitmore'>
-    <link rel='icon' type='image/png' href='favicon.png'>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link type='text/css' rel='stylesheet' href='./css/style.css'>
     <!--[if lt IE 9]>
     <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
@@ -19,7 +19,7 @@
             <img src="./images/me.png" alt="steve whitmore cartoonized headshot">
         </div>
         <h1>Steve Whitmore</h1>
-        <p>Code Enthusiast + Well Rounded Web Magician + Developer at <a href="naic.org" target="_blank">NAIC</a></p>
+        <p>Code Enthusiast + Well Rounded Web Magician + Developer at <a href="http://naic.org" target="_blank">NAIC</a></p>
     </div>
     <div id="down">
         <div id="social-wrap">
@@ -29,10 +29,6 @@
         </div>
     </div>
 </section>
-
-<script defer src="./js/jquery-3.1.1.min.js"></script>
-<script defer src="./js/unslider.min.js"></script>
-<script defer src="./js/main.js"></script>
 
 
 <!--                                           .x+!?T!!+:.
