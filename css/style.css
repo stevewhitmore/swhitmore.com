@@ -295,10 +295,9 @@ footer {
       footer #footer-inner #social-wrap a:hover, footer #footer-inner #social-wrap a:focus {
         background-color: #02b802; }
   footer #footer-inner #mine {
-    color: #fff;
+    color: #67696d;
     margin-bottom: 50px;
-    text-align: center;
-    opacity: 0.6; }
+    text-align: center; }
     footer #footer-inner #mine span {
       color: #b8025d; }
 
