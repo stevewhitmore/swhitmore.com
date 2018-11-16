@@ -1,3 +1,12 @@
+class CustomDOMobject {
+
+    constructor(position, name) {
+        this.position = position;
+        this.name = name;
+    }
+
+}
+
 /************************************************
  * Home Hexagons
  ************************************************/
@@ -54,12 +63,54 @@ function stickyNavOnScroll() {
 
 window.onscroll = function() {
     stickyNavOnScroll();
+    activateSection();
 }
 
 
 /************************************************
  * Active Sections 
  ************************************************/
+
+const $home = document.querySelector('#home');
+const $contact = document.querySelector('#contact');
+const $highlightSections = [$home, ...$sections, $contact];    
+const navlinks = [...$navLinks];
+const homePosition = $highlightSections.find(s => s.id === 'home').getBoundingClientRect();
+const aboutPosition = $highlightSections.find(s => s.id === 'about').getBoundingClientRect();
+const portfolioPosition = $highlightSections.find(s => s.id === 'portfolio').getBoundingClientRect();
+const contactPosition = $highlightSections.find(s => s.id === 'contact').getBoundingClientRect();
+
+const home = new CustomDOMobject(homePosition, 'home');
+const about = new CustomDOMobject(aboutPosition, 'about');
+const portfolio = new CustomDOMobject(portfolioPosition, 'portfolio');
+const contact = new CustomDOMobject(contactPosition, 'contact');
+
+
+const elsThatWillHighlight = [home, about, portfolio, contact];
+
+let link;
+
+function activateSection() {
+    const windowPosition = this.pageYOffset;
+    console.log(windowPosition);
+    console.log(home.position.top)
+
+    for (let el of elsThatWillHighlight) {
+        if (windowPosition >= el.position.top && windowPosition < el.position.bottom) {
+            document.querySelector('.active').classList.remove('active');
+            link = navlinks.find(l => l.innerText.toLowerCase() === el.name);
+            link.parentElement.classList.add('active');
+        }
+        if (windowPosition > 2250) {
+            document.querySelector('.active').classList.remove('active');
+            link = navlinks.find(l => l.innerText.toLowerCase() === 'contact');
+            link.parentElement.classList.add('active');
+        }
+    }
+    
+}
+
+
 // Array.prototype.forEach.call(sections, function(e) {
 //     sections[e.id] = e.pageYOffset;
 // });
