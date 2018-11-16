@@ -52,6 +52,7 @@ body {
     font-family: 'Raleway', sans-serif;
     display: block;
     font-size: 16px;
+    cursor: default;
 }
 h1, h2, h3 {
     font: inherit;
@@ -61,7 +62,7 @@ h1, h2, h3 {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 9;
 }
 
 .heading {
@@ -95,7 +96,6 @@ header {
 }
 
 section {
-    min-height: 200px;
     text-align: center;
     color: #fff;
     padding:80px;
@@ -207,10 +207,16 @@ nav {
                     color: #fff;
                     text-decoration: none;
                     padding: 15px 25px;
+                    transition: 0.5s color ease;
                     &:hover,
                     &:focus {
                         color: $primary;
                     }
+                }
+            }
+            li.active {
+                a {
+                    color: $primary;
                 }
             }
         }
@@ -369,7 +375,7 @@ nav {
                 top: 0;
                 left: 0;
                 background-color: rgba(255,255,255,1);
-                z-index: 9;
+                z-index: 2;
                 width: 100%;
                 height: 300px;
                 transition: 0.5s opacity ease;
@@ -392,7 +398,7 @@ nav {
                     transition: 0.5s top ease;
                     font-size: 1.5rem;
                     span {
-                        color: $primary;
+                        color: $purple;
                         font-size: 1.15rem;
                     }
                 }
@@ -407,14 +413,14 @@ nav {
                         text-decoration: none; //duplicate
                         font-size: 1.25rem;
                         font-family: inherit;
-                        border: 2px solid $primary;
+                        border: 2px solid $purple;
                         padding: 8px 16px;
                         cursor: pointer;
                         transition: 0.5s all ease;
                         &:hover,
                         &:focus {
-                            background-color: $primary;
-                            border-color: $primary;
+                            background-color: $purple;
+                            border-color: $purple;
                             color: #fff;
                             outline: none;
                         }
@@ -429,6 +435,29 @@ nav {
             img {
                 width: 400px;
                 height: 300px;
+            }
+        }
+    }
+}
+
+#testimonials {
+    color: $slate;
+    ul {
+        list-style-type: none;
+        p {
+            text-align: left;
+        }
+        hr {
+            height: 1px;
+            background-color: #02b8b5;
+            margin: 1rem 0;
+        }
+        span {
+            text-align: right;
+            display: block;
+            a {
+                color: #02b8b5; //duplicate
+                text-decoration: none; //duplicate
             }
         }
     }
