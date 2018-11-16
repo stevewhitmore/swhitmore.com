@@ -1,37 +1,6 @@
-// const viewWorkLink = document.querySelector('#view-work');
-// const navBar = document.querySelectorAll('nav a');
-// const scrollTopLink = document.querySelector('#scroll-top');
-// const linkAssignmentList = [ viewWorkLink, scrollTopLink, ...navBar ];
-
-// Array.from(linkAssignmentList, link => {
-//     link.addEventListener('click', e => {
-//         e.preventDefault();
-//         call = setInterval(scroll);
-//         target = e.srcElement.dataset.scroll;
-//         console.log('target: ', target);
-//         offset = document.getElementById(target).offsetTop
-//         console.log('offset: ', offset);
-//         // console.log('offset: ', offset)
-//     })
-// });
-
-
-// let offset = 0;
-// let call;
-// function scroll() {
-//     console.log(offset - document.documentElement.scrollTop)
-//     if ((offset - document.documentElement.scrollTop) > 0) {
-//         document.documentElement.scrollTop += 8
-//     }
-//     else if ((offset - document.documentElement.scrollTop) < 0) {
-//         document.documentElement.scrollTop -= 8
-//     }
-//     else {
-//         clearInterval(call)
-//     }
-// };
-
-/** Home Hexagons **/
+/************************************************
+ * Home Hexagons
+ ************************************************/
 const backdrop = document.querySelector('#home-backdrop');
 const hex = document.createElement('i');
 const colors = [ 
@@ -46,15 +15,37 @@ hex.classList.add('mdi-hexagon-outline');
 backdrop.appendChild(hex);
 
 
-/** END Home Hexagons **/
 
-
-/** Sticky Navbar **/
+/************************************************
+ * Navigation 
+ ************************************************/
+const $viewWork = document.querySelector('#view-work');
 const $nav = document.querySelector('nav');
-const navOffset = $nav.offsetTop;
+const $navLinks = $nav.querySelectorAll('li a');
+const $sections = document.querySelectorAll('section');
+const $scrollTop = document.querySelector('#scroll-top');
+
+
+function smoothScroll() {
+    let target, goToId, goToElement;
+    let links = [...$navLinks, $viewWork, $scrollTop];
+    
+    for (let link of links) {
+        link.addEventListener('click', e => {
+            e.preventDefault();     
+            target = e.target.nodeName === 'I' ? e.target.parentElement : e.target;
+            goToId = target.attributes['href'].value;
+            goToElement = document.querySelector(goToId);
+            goToElement.scrollIntoView({behavior:'smooth', block:'start', inline:'start'});
+        })
+    }
+}
+
+smoothScroll();
+
 
 function stickyNavOnScroll() {
-    if (window.pageYOffset > navOffset) {
+    if (window.pageYOffset > $nav.offsetTop) {
         $nav.classList.add("sticky");
     } else {
         $nav.classList.remove("sticky");
@@ -64,11 +55,30 @@ function stickyNavOnScroll() {
 window.onscroll = function() {
     stickyNavOnScroll();
 }
-/** END Sticky Navbar **/
+
+
+/************************************************
+ * Active Sections 
+ ************************************************/
+// Array.prototype.forEach.call(sections, function(e) {
+//     sections[e.id] = e.pageYOffset;
+// });
+
+// window.onscroll = function() {
+//     let position = this.pageYOffset;
+//     for (i in sections) {
+//         console.log(section[i])
+//     }
+// }
 
 
 
-/** Skills Accordion **/
+
+
+
+/************************************************
+ * Skills Accordion
+ ************************************************/
 const $skillSetButtons = document.querySelectorAll('#my-skillset button');
 
 Array.from($skillSetButtons, btn => {
@@ -76,4 +86,3 @@ Array.from($skillSetButtons, btn => {
         btn.parentElement.classList.toggle('expanded');        
     });
 });
-/** END Skills Accordion **/
