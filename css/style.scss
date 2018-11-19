@@ -208,8 +208,7 @@ nav {
                     text-decoration: none;
                     padding: 15px 25px;
                     transition: 0.5s color ease;
-                    &:hover,
-                    &:focus {
+                    &:hover {
                         color: $primary;
                     }
                 }

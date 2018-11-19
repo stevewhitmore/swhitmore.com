@@ -153,7 +153,7 @@ nav {
           text-decoration: none;
           padding: 15px 25px;
           transition: 0.5s color ease; }
-          nav #nav-inner ul li a:hover, nav #nav-inner ul li a:focus {
+          nav #nav-inner ul li a:hover {
             color: #02b802; }
       nav #nav-inner ul li.active a {
         color: #02b802; }
