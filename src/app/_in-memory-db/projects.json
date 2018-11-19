@@ -1,0 +1,22 @@
+[
+    {
+        "name": "archium",
+        "thumb": "archium.jpg",
+        "slides": [
+            {"0": "ws-slide-3.jpg"}, 
+            {"1": "ws-slide-4.jpg"}, 
+            {"2": "ws-slide-5.jpg"}
+        ],
+        "text": "fucking incomplete motherfucker"
+    },
+    {
+        "name": "teton",
+        "thumb": "teton.jpg",
+        "slides": [
+            {"0": "ws-slide-3.jpg"}, 
+            {"1": "ws-slide-4.jpg"}, 
+            {"2": "ws-slide-5.jpg"}
+        ],
+        "text": "poop fart ass butt this is a shitty fucking app"
+    }
+]

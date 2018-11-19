@@ -1,0 +1,90 @@
+$primary: #02b802;
+$secondary: #02b8b5;
+$purple: #b8025d;
+$slate: #252934;
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 0 10px;
+    color: #fff;
+    height: 100vh;
+    @include flex;
+    #home-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: $slate;
+        mat-icon {
+            position: absolute;
+            transform: rotate(90deg);
+        }
+    }
+    #intro {
+        @include flex;
+        #intro-text {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            h1 {
+                font-size: 3rem;
+                line-height: 4rem;
+                font-weight: 400;
+                .highlight {
+                    font-weight: 600;
+                    color: $primary;
+                }
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+        a#view-work {
+            display: flex;
+            background: transparent;
+            color: #fff; //duplicate
+            text-decoration: none; //duplicate
+            font-size: 1.25rem;
+            font-family: inherit;
+            border: 2px solid #fff;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: 0.5s all ease;
+            mat-icon {
+                margin-left: 10px;
+                font-size: 1.15rem !important;
+                line-height: 1.5rem;
+                transition: 0.5s all ease;
+            }
+            &:hover,
+            &:focus {
+                background-color: $primary;
+                border-color: $primary;
+                outline: none;
+                mat-icon {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }    
+} 
+
+
+button {
+    display: flex;
+    background: transparent;
+    font-size: 1.15rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}

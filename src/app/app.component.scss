@@ -1,0 +1,40 @@
+:host /deep/ {    
+    $primary: #02b802;
+    $secondary: #02b8b5;
+    $purple: #b8025d;
+    $slate: #252934;
+    $gray: #616161;
+    $black: #1B242F;
+
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        h2 {
+            font-size: 2rem;
+            color: $gray;
+            font-weight: 600;
+        }
+        .line {
+            width: 75px;
+            height: 4px;
+            background-color: $gray;
+            align-self: center;
+            margin: 25px 0 75px;
+        }
+    }
+
+    button {
+        background: transparent;
+        font-size: 1.15rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: 0.5s all ease;
+    }
+    
+    section {
+        text-align: center;    
+        padding: 80px;
+    }
+}

@@ -1,0 +1,91 @@
+$primary: #02b802;
+$secondary: #02b8b5;
+$purple: #b8025d;
+$slate: #252934;
+
+#portfolio {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 80px;
+    #portfolio-inner {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .portfolio-single-wrapper {
+            position: relative;
+            color: $slate;
+            &:hover {
+                .overlay {
+                    opacity: 1;
+                }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(255,255,255,1);
+                z-index: 2;
+                width: 100%;
+                height: 300px;
+                transition: 0.5s opacity ease;
+                opacity: 0;
+                &:hover {
+                    .description {
+                        top: 25%;
+                    }
+                    .learn-more-link {
+                        bottom: 25%;
+                    }
+                }
+                > div {
+                    position: absolute;
+                    display: block;
+                    width: 100%
+                }
+                .description {
+                    top: 0;
+                    transition: 0.5s top ease;
+                    font-size: 1.5rem;
+                    span {
+                        color: $purple;
+                        font-size: 1.15rem;
+                    }
+                }
+                .learn-more-link {
+                    bottom: 0;
+                    transition: 0.5s bottom ease;
+                    a {
+                        display: block;
+                        margin: 0 auto;
+                        width: 180px;
+                        color: $slate;
+                        text-decoration: none; //duplicate
+                        font-size: 1.25rem;
+                        font-family: inherit;
+                        border: 2px solid $purple;
+                        padding: 8px 16px;
+                        cursor: pointer;
+                        transition: 0.5s all ease;
+                        &:hover,
+                        &:focus {
+                            background-color: $purple;
+                            border-color: $purple;
+                            color: #fff;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            /*temp*/
+            position: relative;
+            color: #252934;
+            width: 400px;
+            height: 300px;
+            img {
+                width: 400px;
+                height: 300px;
+            }
+        }
+    }
+}

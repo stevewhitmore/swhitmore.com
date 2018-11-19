@@ -1,0 +1,10 @@
+<nav #navbar [class.sticky]="sticky">
+    <div id="nav-inner">
+        <ul>
+            <li class="active" #home (click)="smoothScroll($event)"><a href="#home">Home</a></li>
+            <li><a href="#about" #about (click)="smoothScroll($event)">About</a></li>
+            <li><a href="#portfolio" #portfolio (click)="smoothScroll($event)">Portfolio</a></li>
+            <li><a href="#contact" #contact (click)="smoothScroll($event)">Contact</a></li>
+        </ul>
+    </div>
+</nav>

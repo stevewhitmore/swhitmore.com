@@ -1,0 +1,114 @@
+<section id="about">
+    <div class="inner">
+        <div class="heading">
+            <h2>ABOUT</h2>
+            <div class="line"></div>
+        </div>
+        <div class="hex-outer">
+            <div class="hex-wrap">
+                <div class="hexagon">
+                    <mat-icon svgIcon="speedometer"></mat-icon>
+                    <span class="mi mi-face"></span>
+                </div>
+                <span class="hex-title"><strong>Fast</strong></span>
+                <span>Speed is a core concern</span>
+            </div>
+            <div class="hex-wrap">
+                <div class="hexagon">
+                    <mat-icon svgIcon="responsive"></mat-icon>
+                </div>
+                <span class="hex-title"><strong>Resonsive</strong></span>
+                <span>My layouts will work on any device, big or small.</span>
+            </div>
+            <div class="hex-wrap">
+                <div class="hexagon">
+                    <mat-icon svgIcon="shield-lock"></mat-icon>
+                </div>
+                <span class="hex-title"><strong>Secure</strong></span>
+                <span>My layouts will work on any device, big or small.</span>
+            </div>
+            <div class="hex-wrap">
+                <div class="hexagon">
+                    <mat-icon svgIcon="account-group"></mat-icon>
+                </div>
+                <span class="hex-title"><strong>Accessible</strong></span>
+                <span>My layouts will work on any device, big or small.</span>
+            </div>
+        </div>
+        <div id="about-main">
+            <div id="short-bio">
+                <img src="../../assets/images/me-hex.png" alt="My cartoonized profile picture"/>
+                <span><strong>Who is this guy?</strong></span>
+                <span><p>I'm a full-stack developer at the <a href="https://naic.org" target="_blank">NAIC</a> in Kansas City, MO.</p>
+                <p>I'm passionate about providing the best possible product<br>through clear communication, adhering to best practices,<br>and a strong dedication to clean, concise code.</p></span>
+                <span><p><a a href="#" data-scroll="contact">Let's make something special.</a></p></span>
+            </div>
+            <div id="my-skillset">
+                <div class="skill-wrapper">
+                    <button #frontend (click)="expandSection(frontend)">Front-end Development <mat-icon svgIcon="arrow-right"></mat-icon></button>
+                    <ul>
+                        <li>Angular</li>
+                        <li>JavaScript</li>
+                        <li>RxJS</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>jQuery</li>
+                        <li>Photoshop</li>
+                        <li>GIMP</li>
+                        <li>Illustrator</li>
+                        <li>Inkscape</li>
+                    </ul>
+                </div>
+                <div class="skill-wrapper">
+                    <button #backend (click)="expandSection(backend)">Back-end Development <mat-icon svgIcon="arrow-right"></mat-icon></button>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>PHP</li>
+                        <li>JPA</li>
+                        <li>SQL</li>            
+                        <li>Hibernate</li>
+                        <li>JPQL</li>
+                        <li>Go</li>
+                    </ul>
+                </div>
+                <div class="skill-wrapper">
+                    <button #cms (click)="expandSection(cms)">Content Management Systems <mat-icon svgIcon="arrow-right"></mat-icon></button>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Magento</li>
+                        <li>NetSuite</li>
+                        <li>CS Cart</li>
+                        <li>Drupal</li>
+                        <li>ExpressionEngine</li>
+                        <li>Joomla</li>
+                    </ul>
+                </div>
+                <div class="skill-wrapper">
+                    <button #admin (click)="expandSection(admin)">Web/System Administration <mat-icon svgIcon="arrow-right"></mat-icon></button>
+                    <ul>                                        
+                        <li>Troubleshooting Issues</li>
+                        <li>Customer Service</li>
+                        <li>Communication</li>
+                        <li>GNU/Linux</li>
+                        <li>macOS</li>
+                        <li>Windows</li>
+                        <li>Security best practices</li>
+                        <li>Scripting (BASH/Python)</li>
+                    </ul>
+                </div>
+                <div class="skill-wrapper">
+                    <button #other (click)="expandSection(other)">Other <mat-icon svgIcon="arrow-right"></mat-icon></button>
+                    <ul>
+                        <li>Git</li>
+                        <li>SVN</li>
+                        <li>C/C++</li>
+                        <li>Assembly Language</li>
+                        <li>Computer Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
