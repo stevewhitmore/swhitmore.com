@@ -1,32 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationService } from '../services/navigation.service';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { of } from 'rxjs';
-declare const require: any;
-
-const testimonials = require('../_in-memory-db/testimonials.json');
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationService } from '../services';
+import { DataService } from '../services';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   testimonials: any;
+  dataSubscription: Subscription
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(private dataService: DataService,
+              private navigationService: NavigationService) {}
 
   ngOnInit() {
-    this.getTestimonials()
-      .subscribe(data => this.testimonials = data);      
+    this.getTestimonials();
   }
 
   getTestimonials() {
-    return of(testimonials);
+    this.dataService.getTestimonials()
+      .subscribe(data => this.testimonials = data);
   }
 
   smoothScroll(event) {
     this.navigationService.smoothScroll(event);
+  }
+
+  ngOnDestroy() {
+    if (this.dataSubscription) this.dataSubscription.unsubscribe();
   }
 
 }

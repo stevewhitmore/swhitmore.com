@@ -1,29 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { of } from 'rxjs';
-declare const require: any;
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DataService } from '../services';
 
-const portfolio = require('../_in-memory-db/projects.json');
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, OnDestroy {
   projects: any;
   selectedProject: any;
   viewSingleProject = false;
+  dataSubscription: Subscription;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.getProjects().subscribe(data => {
-      this.projects = data;
-    });
+    this.getProjects();
   }
 
   getProjects() {
-    return of(portfolio);
+    this.dataService.getProjects().subscribe(data => {
+      this.projects = data;
+    });
   }
 
   loadProject(project) {
@@ -34,6 +34,10 @@ export class PortfolioComponent implements OnInit {
 
   toggleViewSingleProject() {
     this.viewSingleProject = !this.viewSingleProject;
+  }
+
+  ngOnDestroy() {
+    if (this.dataSubscription) this.dataSubscription.unsubscribe();
   }
 
 }

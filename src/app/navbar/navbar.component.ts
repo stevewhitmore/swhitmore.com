@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, Inject } from '@angular/core';
 import { HostListener} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
-import { NavigationService } from '../services/navigation.service';
+import { NavigationService } from '../services';
 
 
 
