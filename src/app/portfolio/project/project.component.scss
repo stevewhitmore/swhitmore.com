@@ -1,0 +1,51 @@
+$purple: #b8025d;
+$slate: #252934;
+
+:host {
+    display: block;
+    padding: 0 80px;    
+}
+
+.carousel {
+    width: 585px;
+}
+
+.two-column {
+    margin: 50px 0;
+    text-align: left;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+.description,
+ul {
+    margin-left: 2rem;
+}
+
+.row {
+    justify-content: space-between;
+}
+a {
+    color: $slate;
+    text-decoration: none; //duplicate
+    font-size: 1.25rem;
+    font-family: inherit;
+    border: 2px solid $purple;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        background-color: $purple;
+        border-color: $purple;
+        color: #fff;
+        outline: none;
+    }
+}
+
+button {
+    float: left;
+    color: $purple;
+    outline: none;
+}

@@ -1,22 +1,56 @@
 [
     {
-        "name": "archium",
+        "id": "archium",
+        "name": "Archium",
         "thumb": "archium.jpg",
-        "slides": [
-            {"0": "ws-slide-3.jpg"}, 
-            {"1": "ws-slide-4.jpg"}, 
-            {"2": "ws-slide-5.jpg"}
-        ],
-        "text": "fucking incomplete motherfucker"
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "fucking incomplete motherfucker",
+        "features": [],
+        "url": "#"
     },
     {
-        "name": "teton",
+        "id": "teton",
+        "name": "Teton West Colorado",
         "thumb": "teton.jpg",
-        "slides": [
-            {"0": "ws-slide-3.jpg"}, 
-            {"1": "ws-slide-4.jpg"}, 
-            {"2": "ws-slide-5.jpg"}
-        ],
-        "text": "poop fart ass butt this is a shitty fucking app"
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "poop fart ass butt this is a shitty fucking app",
+        "features": [],
+        "url": "https://tetonwest.com"
+    },
+    {
+        "id": "mc",
+        "name": "Motion Constrained",
+        "thumb": "mc.jpg",
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "As one of the few companies in the United States that offers authentic Hiwin linear motion products, Motion Constrained specializes in the sale and distribution of a variety of machine parts for automation.",
+        "features": ["Monitor and manage website sales, security, and general activity", "SEO and speed optimization", "Code refactoring", "Clean and modern redesign", "Responsive styling fixes"],
+        "url": "https://motionconstrained.com"
+    },
+    {
+        "id": "escape",
+        "name": "ConTRAPtions Escape Rooms",
+        "thumb": "contraptions.jpg",
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "These guys combine the creative power of an artist and a machanical engineer to bring to life a very exciting and unique escape room experience. It has consistently been rated one of the top escape rooms in northern Colorado and has been featured on several major news outvars.",
+        "features": [],
+        "url": "https://escape.place"
+    },
+    {
+        "id": "apfed",
+        "name": "American Partnership For Eosinophilic Disorders",
+        "thumb": "apfed.jpg",
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "APFED is an organization dedicated to spreading information about eosinophil-associated diseases. They do everything they can to help those suffering from these conditions and their families, including fund raising, volunteer work, education, research, and advocacy.",
+        "features": ["Help with implementation of the Doctor Finder, an advanced search filtration system to help users find the health care they need", "Integration with 3rd party software dedicated to gathering financial support for their cause (SALSA)", "Adding other custom features", "Responsive styling fixes and tweaks", "Site wide content updates", "Continuing support for the product (front and back end)", "Regular WordPress and plugin updates"],
+        "url": "https://apfed.org"
+    },
+    {
+        "id": "eye",
+        "name": "Eye Consultants of Atlanta",
+        "thumb": "eye.jpg",
+        "slides": ["/assets/images/ws-slide-3.jpg", "/assets/images/ws-slide-4.jpg", "/assets/images/ws-slide-5.jpg"],
+        "text": "Eye Consultants of Atlanta are the leading care providors for LASIK, cataract surgery, glaucoma treatment, and other general eye care in the Atlanta metro area. VisFire worked closely with them to come up with a design that would be optimal for their audience.",
+        "features": ["Responsive styling fixes and tweaks", "Initial content upload", "Client training via screen-share", "Continuing support for the product (front and back end)", "Regular WordPress and plugin updates"],
+        "url": "https://www.eyeconsultants.net/"
     }
 ]

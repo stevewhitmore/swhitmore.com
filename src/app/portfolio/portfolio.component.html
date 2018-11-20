@@ -8,47 +8,48 @@
         <div class="portfolio-single-wrapper">
             <div class="overlay">
                 <div class="description"><strong>Archium</strong><br><span>Angular + Express.js</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
+                <div class="learn-more-link"><button (click)="loadProject('archium')">Learn More</button></div>
             </div>
             <img src="../../assets/images/archium.jpg" alt="Archium web app screenshot thumbnail" />
         </div>
         <div class="portfolio-single-wrapper">
             <div class="overlay">
                 <div class="description"><strong>Teton West Colorado</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#" (click)="loadProject('teton')">Learn More</a></div>
+                <div class="learn-more-link"><button (click)="loadProject('teton')">Learn More</button></div>
             </div>
             <img src="../../assets/images/teton.jpg" alt="Teton West Colorado website screenshot thumbnail" />
         </div>
         <div class="portfolio-single-wrapper">
             <div class="overlay">
                 <div class="description"><strong>Motion Constrained LLC</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
+                <div class="learn-more-link"><button (click)="loadProject('mc')">Learn More</button></div>
             </div>
             <img src="../../assets/images/mc.jpg" alt="Motion Constrained LLC website screenshot thumbnail" />
         </div>
         <div class="portfolio-single-wrapper">
             <div class="overlay">
                 <div class="description"><strong>ConTRAPtions Escape Rooms</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
+                <div class="learn-more-link"><button (click)="loadProject('escape')">Learn More</button></div>
             </div>
             <img src="../../assets/images/contraptions.jpg" alt="Contraptions Escape Rooms website screenshot thumbnail" />
         </div>
         <div class="portfolio-single-wrapper">
             <div class="overlay">
                 <div class="description"><strong>APFED</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
+                <div class="learn-more-link"><button (click)="loadProject('apfed')">Learn More</button></div>
             </div>
             <img src="../../assets/images/apfed.jpg" alt="American Partnership of Eosinophilic Disorders (APFED) website screenshot thumbnail" />
         </div>
         <div class="portfolio-single-wrapper">
             <div class="overlay">
             <div class="description"><strong>Eye Consultants of Atlanta</strong><br><span>WordPress</span></div>
-            <div class="learn-more-link"><a href="#">Learn More</a></div>
+            <div class="learn-more-link"><button (click)="loadProject('eye')">Learn More</button></div>
             </div>
             <img src="../../assets/images/eye.jpg" alt="Eye Consultants of Atlanta website screenshot thumbnail" />
         </div>
     </div>
     <div *ngIf="viewSingleProject">
-        <app-project [project]="selectedProject"></app-project>
+        <app-project [project]="selectedProject"
+                     (toggleProjectViewEvent)="toggleViewSingleProject($event)"></app-project>
     </div>
 </section>

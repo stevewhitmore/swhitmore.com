@@ -22,14 +22,14 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
+  getProjects() {
+    return of(portfolio);
+  }
+
   loadProject(project) {
     event.preventDefault();
     this.toggleViewSingleProject();
-    this.selectedProject = this.projects.find(p => p.name === project);
-  }
-
-  getProjects() {
-    return of(portfolio);
+    this.selectedProject = this.projects.find(p => p.id === project);
   }
 
   toggleViewSingleProject() {

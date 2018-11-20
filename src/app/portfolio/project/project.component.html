@@ -1,3 +1,19 @@
-{{project.name}}
-<br>
-{{project.text}}
+<h3>{{project.name | titlecase}}</h3>
+
+<div class="two-column">
+    <ngb-carousel *ngIf="project">
+        <ng-template ngbSlide *ngFor="let slide of project.slides">
+            <img [src]="slide"/>
+        </ng-template>
+    </ngb-carousel>
+    <div class="description">
+        <p>{{project.text}}</p>
+        <ul *ngIf="project?.features">
+            <li *ngFor="let feature of project?.features">{{feature}}</li>
+        </ul>    
+    </div>
+</div>
+<div class="row">
+    <button (click)="toggleProjectView()">Go Back</button>
+    <a href="{{project.url}}" target="_blank">View live project <mat-icon svgIcon="arrow-right"></mat-icon></a>
+</div>    

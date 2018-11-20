@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { ProjectComponent } from './portfolio/project/project.component';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,

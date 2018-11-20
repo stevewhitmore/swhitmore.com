@@ -5,27 +5,31 @@ $slate: #252934;
 
 #testimonials {
     color: $slate;
-    ul {
-        list-style-type: none;
-        p {
-            text-align: left;
-        }
-        hr {
-            height: 1px;
-            background-color: #02b8b5;
-            margin: 1rem 0;
-        }
-        span {
-            text-align: right;
-            display: block;
-            a {
-                color: #02b8b5; //duplicate
-                text-decoration: none; //duplicate
-            }
+    height: 300px;
+    padding: 80px 120px;
+    .carousel {
+        outline: none;
+    }
+    p {
+        text-align: left;
+    }
+    span {
+        float: right;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $primary;
         }
     }
 }
-
+.carousel-item {
+    opacity: 0;
+    transition: 0.5s opacity ease;
+}
+.carousel-item.active {
+    visibility: 1;
+}
 
 footer {
     display: flex;

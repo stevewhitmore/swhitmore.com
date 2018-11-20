@@ -23,7 +23,7 @@ export class NavbarComponent {
 
   @HostListener("window:scroll", ['$event'])
   stickyNavOnScroll() {
-    if(window.pageYOffset >= this.navBarPosition){
+    if (window.pageYOffset + 100 >= this.navBarPosition){
       this.sticky = true;
     } else {
       this.sticky = false;
