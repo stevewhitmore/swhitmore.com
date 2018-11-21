@@ -3,7 +3,7 @@ import { of } from 'rxjs';
 
 declare const require: any;
 
-const aboutText = require('../_in-memory-db/about-text');
+const aboutText = require('../_in-memory-db/about-text.json');
 const skills = require('../_in-memory-db/about-skills.json');
 const portfolio = require('../_in-memory-db/projects.json');
 const testimonials = require('../_in-memory-db/testimonials.json');

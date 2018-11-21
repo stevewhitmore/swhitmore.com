@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(@mdi/font//fonts/materialdesignicons-webfont.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(@mdi/font//fonts/materialdesignicons-webfont.woff2) format('woff2'),
+      url(@mdi/font//fonts/materialdesignicons-webfont.woff) format('woff'),
+      url(@mdi/font//fonts/materialdesignicons-webfont.ttf) format('truetype');
+  }
 
 * {
     margin: 0;

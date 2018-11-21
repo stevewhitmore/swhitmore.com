@@ -30,12 +30,11 @@ $gray: #616161;
                 width: 60px;
                 font-size: 3rem;
                 background-color: $purple;
-                mat-icon {
+                i {
                     color: #fff;
                     width: 48px; 
                     height: 56px;
                     line-height: 56px;
-                    margin-bottom: 24px;
                 }
                 
                 &:before,
@@ -112,7 +111,7 @@ $gray: #616161;
             margin-bottom: 15px;
             button {
                 @include accordion-button;
-                mat-icon {
+                i {
                     transform: rotate(90deg);
                     color: #fff;
                 }
@@ -132,7 +131,7 @@ $gray: #616161;
             color: #616161;
             border-bottom: 1px solid #e4e4e4;
             outline: none;
-            mat-icon {
+            i {
                 margin-left: 10px;
                 transition: 0.5s transform ease;
             }

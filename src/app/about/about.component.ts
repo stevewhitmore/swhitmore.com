@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService, DataService } from '../services';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  skills$: Observable<any>;
+  skillsSub: Subscription;
+  skills: any;
   aboutText$: Observable<any>;
 
   constructor(private dataService: DataService,
@@ -23,7 +24,10 @@ export class AboutComponent implements OnInit {
   }
 
   getSkills() {
-    this.skills$ = this.dataService.getSkills();
+    this.dataService.getSkills().subscribe(data => {
+      this.skills = data;
+      console.log(this.skills);
+    })
   }
 
   smoothScroll(event) {
@@ -32,6 +36,10 @@ export class AboutComponent implements OnInit {
 
   expandSection(btn) {
     btn.parentElement.classList.toggle('expanded');        
+  }
+
+  ngOnDestroy() {
+    if (this.skillsSub) this.skillsSub.unsubscribe();
   }
 
 }

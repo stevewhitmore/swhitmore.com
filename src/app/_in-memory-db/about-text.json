@@ -1,0 +1,27 @@
+[
+    {
+        "highlights": [
+            {
+                "title": "Fast", 
+                "description": "fast as a mofo"
+            },
+            {
+                "title": "Responsive", 
+                "description": "My layouts will work on any device, big or small."
+            },
+            {
+                "title": "Secure", 
+                "description": "as secure as any wp site could be..."
+            },
+            {
+                "title": "Accessible", 
+                "description": "WCAG standards or something or other"
+            }
+        ],
+        "bio": {
+            "image": "",
+            "title": "",
+            "text": ""
+        }
+    }
+]

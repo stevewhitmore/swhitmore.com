@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatIconRegistry, MatIconModule } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +18,6 @@ import { ProjectComponent } from './portfolio/project/project.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule,
     HttpClientModule,
     NgbModule.forRoot()
   ],
@@ -36,8 +33,4 @@ import { ProjectComponent } from './portfolio/project/project.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
-    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')); // Or whatever path you placed mdi.svg at
-  }
-}
+export class AppModule {}
