@@ -1,25 +1,27 @@
-<section id="testimonials">
-    <ngb-carousel *ngIf="testimonials" 
-                  [showNavigationArrows]="true" 
-                  [showNavigationIndicators]="false"
-                  [pauseOnHover]="true">
-        <ng-template ngbSlide *ngFor="let testimonial of testimonials">
-            <p>{{testimonial.text}}</p>
-            <hr>
-            <span class="comment-author">- {{testimonial.commenter}}, {{testimonial.title}} of <a href="{{testimonial.url}}" target="_blank" class="testi-source">{{testimonial.company}}</a></span>
-        </ng-template>
-      </ngb-carousel>
-</section>
+<section id="contact" inViewport (inViewportAction)="onView($event)">
+    <section id="testimonials">
+        <ngb-carousel *ngIf="testimonials" 
+                    [showNavigationArrows]="true" 
+                    [showNavigationIndicators]="false"
+                    [pauseOnHover]="true">
+            <ng-template ngbSlide *ngFor="let testimonial of testimonials">
+                <p>{{testimonial.text}}</p>
+                <hr>
+                <span class="comment-author">- {{testimonial.commenter}}, {{testimonial.title}} of <a href="{{testimonial.url}}" target="_blank" class="testi-source">{{testimonial.company}}</a></span>
+            </ng-template>
+        </ngb-carousel>
+    </section>
 
-<footer id="contact">
-    <div id="footer-inner">
-        <a id="scroll-top" href="#home" (click)="smoothScroll($event)"><i class="mdi mdi-chevron-double-up"></i></a>
-        <div id="social-wrap">
-            <a href='https://github.com/stevewhitmore' target='_blank'><i class="mdi mdi-github-circle"></i></a>
-            <a href='https://www.linkedin.com/in/steve-whitmore' target='_blank'><i class="mdi mdi-linkedin"></i></a>
-            <a href='tel:19702379599' target='_blank'><i class="mdi mdi-phone-outgoing"></i></a>
-            <a href='mailto:steve@swhitmore.com'><i class="mdi mdi-email-outline"></i></a>
-        </div>
-        <div id="mine">Steve Whitmore <span>&copy;2018</span></div>
-    </div>    
-</footer>
+    <footer id="contact">
+        <div id="footer-inner">
+            <a id="scroll-top" href="#home" (click)="smoothScroll($event)"><i class="mdi mdi-chevron-double-up"></i></a>
+            <div id="social-wrap">
+                <a href='https://github.com/stevewhitmore' target='_blank'><i class="mdi mdi-github-circle"></i></a>
+                <a href='https://www.linkedin.com/in/steve-whitmore' target='_blank'><i class="mdi mdi-linkedin"></i></a>
+                <a href='tel:19702379599' target='_blank'><i class="mdi mdi-phone-outgoing"></i></a>
+                <a href='mailto:steve@swhitmore.com'><i class="mdi mdi-email-outline"></i></a>
+            </div>
+            <div id="mine">Steve Whitmore <span>&copy;2018</span></div>
+        </div>    
+    </footer>
+</section>

@@ -28,6 +28,10 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.navigationService.smoothScroll(event);
   }
 
+  onView({ target, visible }: { target: Element; visible: boolean }) {
+    this.navigationService.toggleActiveClass({target, visible});
+  }
+
   ngOnDestroy() {
     if (this.dataSubscription) this.dataSubscription.unsubscribe();
   }

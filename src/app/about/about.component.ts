@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NavigationService, DataService } from '../services';
 import { Observable, Subscription } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  @Output() sectionVisibleEvent: EventEmitter<any> = new EventEmitter();  
   skillsSub: Subscription;
   skills: any;
   aboutText$: Observable<any>;
@@ -36,6 +37,11 @@ export class AboutComponent implements OnInit {
 
   expandSection(btn) {
     btn.parentElement.classList.toggle('expanded');        
+  }
+
+  onView({ target, visible }: { target: Element; visible: boolean }) {
+    this.sectionVisibleEvent.emit({ target, visible });
+    this.navigationService.toggleActiveClass({target, visible});
   }
 
   ngOnDestroy() {

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { DataService } from '../services';
+import { DataService, NavigationService } from '../services';
 
 
 @Component({
@@ -14,7 +14,8 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   viewSingleProject = false;
   dataSubscription: Subscription;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private navigationService: NavigationService) { }
 
   ngOnInit() {
     this.getProjects();
@@ -34,6 +35,10 @@ export class PortfolioComponent implements OnInit, OnDestroy {
 
   toggleViewSingleProject() {
     this.viewSingleProject = !this.viewSingleProject;
+  }
+
+  onView({ target, visible }: { target: Element; visible: boolean }) {
+    this.navigationService.toggleActiveClass({target, visible});
   }
 
   ngOnDestroy() {

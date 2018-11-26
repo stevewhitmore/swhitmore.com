@@ -11,6 +11,8 @@ $gray: #616161;
 }
 
 #about {
+    padding: 80px;
+    text-align: center;
     .hex-outer {
         display: flex;
         justify-content: space-evenly;
@@ -22,6 +24,7 @@ $gray: #616161;
             flex-direction: column;
             margin: 0 15px;
             align-items: center;
+            width: 25%;
             .hexagon {
                 display: flex;
                 justify-content: center;
