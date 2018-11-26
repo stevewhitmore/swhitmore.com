@@ -7,8 +7,17 @@ $slate: #252934;
 }
 
 .carousel {
-    width: 585px;
+    width: 768px;
     outline: none;
+}
+
+:host /deep/ .carousel-item {
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+:host /deep/ .carousel-item.active {
+    opacity: 1;
 }
 
 .two-column {
@@ -50,3 +59,4 @@ button {
     color: $purple;
     outline: none;
 }
+

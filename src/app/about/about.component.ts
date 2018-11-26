@@ -11,23 +11,27 @@ export class AboutComponent implements OnInit {
   @Output() sectionVisibleEvent: EventEmitter<any> = new EventEmitter();  
   skillsSub: Subscription;
   skills: any;
-  aboutText$: Observable<any>;
+  aboutText: any;
+  highlights: any;
 
   constructor(private dataService: DataService,
               private navigationService: NavigationService) {}
 
   ngOnInit() {
+    this.getAboutText();
     this.getSkills();
   }
 
-  getAboutUsText() {
-    this.aboutText$ = this.dataService.getAboutText();
+  getAboutText() {
+    this.dataService.getAboutText().subscribe(data => {
+      this.aboutText = data;
+      this.highlights = this.aboutText['highlights'];
+    });
   }
 
   getSkills() {
     this.dataService.getSkills().subscribe(data => {
       this.skills = data;
-      console.log(this.skills);
     })
   }
 

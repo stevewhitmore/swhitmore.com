@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
     this.navigationService.smoothScroll(event);
   }
 
-  // onView({ target, visible }: { target: Element; visible: boolean }) {
-  //   this.navigationService.toggleActiveClass({target, visible});
-  // }
+  onView({ target, visible }: { target: Element; visible: boolean }) {
+    // this.navigationService.toggleActiveClass({target, visible});
+  }
 
 }

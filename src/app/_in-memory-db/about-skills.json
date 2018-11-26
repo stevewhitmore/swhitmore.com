@@ -1,6 +1,6 @@
 {
     "frontend": ["Angular", "JavaScript", "RxJS", "HTML5", "CSS3", "jQuery", "Photoshop", "GIMP", "Illustrator", "Inkscape"],
-    "backend": ["Node.js","Express.js","MongoDB","PHP","JPA","SQL","Hibernate","JPQL","Go"],
+    "backend": ["Node.js","Express.js","MongoDB","PHP","SQL","JPA","Hibernate","JPQL","Go"],
     "cms": ["WordPress","Magento","NetSuite","CS Cart","Drupal","ExpressionEngine","Joomla"],
     "admin": ["Troubleshooting Issues", "Customer Service", "Communication", "GNU/Linux", "macOS", "Windows", "Security best practices", "Scripting (BASH/Python)"],
     "other": ["Git","SVN","C/C++","Assembly Language","Computer Architecture"]

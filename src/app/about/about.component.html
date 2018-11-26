@@ -5,33 +5,12 @@
             <div class="line"></div>
         </div>
         <div class="hex-outer">
-            <div class="hex-wrap">
+            <div *ngFor="let h of this.highlights" class="hex-wrap">
                 <div class="hexagon">
-                    <i class="mdi mdi-speedometer"></i>
+                    <i class="mdi {{h.icon}}"></i>
                 </div>
-                <span class="hex-title"><strong>Fast</strong></span>
-                <span>Speed is a core concern</span>
-            </div>
-            <div class="hex-wrap">
-                <div class="hexagon">
-                    <i class="mdi mdi-responsive"></i>
-                </div>
-                <span class="hex-title"><strong>Resonsive</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
-            </div>
-            <div class="hex-wrap">
-                <div class="hexagon">
-                    <i class="mdi mdi-security-lock"></i>
-                </div>
-                <span class="hex-title"><strong>Secure</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
-            </div>
-            <div class="hex-wrap">
-                <div class="hexagon">
-                    <i class="mdi mdi-account-group"></i>
-                </div>
-                <span class="hex-title"><strong>Accessible</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span class="hex-title"><strong>{{h.title}}</strong></span>
+                <span>{{h.description}}</span>
             </div>
         </div>
         <div id="about-main">
