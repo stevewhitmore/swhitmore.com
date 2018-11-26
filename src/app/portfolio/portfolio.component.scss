@@ -12,6 +12,7 @@ $slate: #252934;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         .portfolio-single-wrapper {
             position: relative;
             color: $slate;
@@ -80,11 +81,32 @@ $slate: #252934;
             /*temp*/
             position: relative;
             color: #252934;
-            width: 400px;
-            height: 300px;
+            width: 33%;
             img {
-                width: 400px;
-                height: 300px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #portfolio {
+        padding: 40px;
+        #portfolio-inner {
+            .portfolio-single-wrapper {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 648px) {
+    #portfolio {
+        padding: 20px;
+        #portfolio-inner {
+            .portfolio-single-wrapper {
+                width: 100%;
             }
         }
     }

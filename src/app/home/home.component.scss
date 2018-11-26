@@ -15,6 +15,7 @@ header {
     color: #fff;
     height: 100vh;
     @include flex;
+    overflow: hidden;
     #home-backdrop {
         position: absolute;
         top: 0;

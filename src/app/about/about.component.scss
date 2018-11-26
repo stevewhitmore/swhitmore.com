@@ -24,7 +24,7 @@ $gray: #616161;
             flex-direction: column;
             margin: 0 15px;
             align-items: center;
-            width: 25%;
+            flex: 0 0 25%;
             .hexagon {
                 display: flex;
                 justify-content: center;
@@ -156,4 +156,36 @@ $gray: #616161;
             }
         }
     }
+}
+
+@media (max-width: 900px) {
+    #about {
+        padding: 40px;
+        .hex-outer {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            .hex-wrap {
+                margin: 0 10px 30px;
+                flex: 0 0 45%;
+                span {
+                    strong {
+                        margin: 5px 0 0 0;
+                    }
+                }
+            }
+        }
+        #about-main {
+            flex-flow: column wrap;  
+            > div {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+            #short-bio {
+                margin: 25px 0;
+            }
+            #my-skillset {
+                margin: 0;
+            }
+        }
+    }    
 }
