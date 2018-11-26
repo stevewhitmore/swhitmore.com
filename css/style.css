@@ -61,9 +61,10 @@ header {
   justify-content: center;
   align-items: center; }
 
+.center {
+  text-align: center; }
+
 section {
-  text-align: center;
-  color: #fff;
   padding: 80px; }
 
 .highlight {
@@ -95,7 +96,6 @@ header {
       transform: rotate(90deg); }
   header #intro #intro-text {
     font-weight: 400;
-    text-align: center;
     margin-bottom: 1.5rem; }
     header #intro #intro-text h1 {
       font-size: 3rem;
@@ -145,7 +145,6 @@ nav {
       list-style-type: none;
       align-self: flex-start; }
       nav #nav-inner ul li {
-        text-align: left;
         margin: 15px 0;
         max-width: 100px; }
         nav #nav-inner ul li a {
@@ -158,113 +157,118 @@ nav {
       nav #nav-inner ul li.active a {
         color: #02b802; }
 
-#about .hex-outer {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 100px; }
-  #about .hex-outer .hex-wrap {
+#about {
+  color: #fff; }
+  #about .hex-outer {
     display: flex;
-    text-align: center;
     justify-content: space-evenly;
-    flex-direction: column;
-    margin: 0 15px;
-    align-items: center; }
-    #about .hex-outer .hex-wrap .hexagon {
+    margin-bottom: 100px; }
+    #about .hex-outer .hex-wrap {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-      width: 60px;
-      font-size: 3rem;
-      background-color: #b8025d; }
-      #about .hex-outer .hex-wrap .hexagon:before, #about .hex-outer .hex-wrap .hexagon:after {
-        position: absolute;
-        top: 0;
-        right: -30px;
-        content: '';
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid transparent;
-        border-left: 30px solid #b8025d;
-        width: 0;
-        height: 0; }
-      #about .hex-outer .hex-wrap .hexagon:after {
-        left: -30px;
-        border-left: none;
-        border-right: 30px solid #b8025d; }
-#about #about-main {
-  display: flex; }
-  #about #about-main > div {
-    width: 50%; }
-  #about #about-main #short-bio strong,
-  #about #about-main #short-bio p {
-    margin-bottom: 15px; }
-  #about #about-main ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    align-self: flex-start;
-    flex-wrap: wrap; }
-    #about #about-main ul li {
-      background-color: #02b8b5;
+      justify-content: space-evenly;
+      flex-direction: column;
+      margin: 0 15px;
+      align-items: center; }
+      #about .hex-outer .hex-wrap .hexagon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 60px;
+        font-size: 3rem;
+        background-color: #b8025d; }
+        #about .hex-outer .hex-wrap .hexagon:before, #about .hex-outer .hex-wrap .hexagon:after {
+          position: absolute;
+          top: 0;
+          right: -30px;
+          content: '';
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 30px solid #b8025d;
+          width: 0;
+          height: 0; }
+        #about .hex-outer .hex-wrap .hexagon:after {
+          left: -30px;
+          border-left: none;
+          border-right: 30px solid #b8025d; }
+  #about #about-main {
+    display: flex; }
+    #about #about-main > div {
+      width: 50%; }
+    #about #about-main #short-bio strong,
+    #about #about-main #short-bio p {
+      margin-bottom: 15px; }
+    #about #about-main ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      align-self: flex-start;
+      flex-wrap: wrap; }
+      #about #about-main ul li {
+        background-color: #02b8b5;
+        font-weight: 600;
+        padding: 5px;
+        margin: 5px;
+        margin-left: 0; }
+  #about span {
+    color: #616161; }
+    #about span strong {
+      display: block;
+      font-size: 1.5rem;
+      margin: 15px 0 5px 0; }
+    #about span a {
+      color: #02b8b5;
+      text-decoration: none; }
+      #about span a:hover {
+        color: #02b802; }
+  #about #my-skillset {
+    margin-left: 50px; }
+    #about #my-skillset .skill-wrapper:last-child button {
+      border: none; }
+    #about #my-skillset .skill-wrapper.expanded {
+      margin-bottom: 15px; }
+      #about #my-skillset .skill-wrapper.expanded button {
+        color: #fff;
+        background-color: #02b802;
+        border-bottom: 1px solid #02b802; }
+        #about #my-skillset .skill-wrapper.expanded button i {
+          transform: rotate(90deg); }
+      #about #my-skillset .skill-wrapper.expanded ul {
+        margin-top: 10px;
+        max-height: 300px; }
+    #about #my-skillset button {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
       font-weight: 600;
-      padding: 5px;
-      margin: 5px;
-      margin-left: 0; }
-#about span {
-  color: #616161; }
-  #about span strong {
-    display: block;
-    font-size: 1.5rem;
-    margin: 15px 0 5px 0; }
-  #about span a {
-    color: #02b8b5;
-    text-decoration: none; }
-    #about span a:hover {
-      color: #02b802; }
-#about #my-skillset {
-  margin-left: 50px; }
-  #about #my-skillset .skill-wrapper:last-child button {
-    border: none; }
-  #about #my-skillset .skill-wrapper.expanded {
-    margin-bottom: 15px; }
-    #about #my-skillset .skill-wrapper.expanded button {
-      color: #fff;
-      background-color: #02b802;
-      border-bottom: 1px solid #02b802; }
-      #about #my-skillset .skill-wrapper.expanded button i {
-        transform: rotate(90deg); }
-    #about #my-skillset .skill-wrapper.expanded ul {
-      margin-top: 10px;
-      max-height: 300px; }
-  #about #my-skillset button {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    font-weight: 600;
-    color: #616161;
-    border-bottom: 1px solid #e4e4e4; }
-    #about #my-skillset button i {
-      margin-left: 10px;
-      transition: 0.5s transform ease; }
-    #about #my-skillset button:hover {
-      color: #fff;
-      background-color: #02b802;
-      border-bottom: 1px solid #02b802; }
-  #about #my-skillset ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.5s all ease; }
-    #about #my-skillset ul li {
-      cursor: default; }
-      #about #my-skillset ul li:hover {
-        background-color: #02b802; }
+      color: #616161;
+      border-bottom: 1px solid #e4e4e4; }
+      #about #my-skillset button i {
+        margin-left: 10px;
+        transition: 0.5s transform ease; }
+      #about #my-skillset button:hover {
+        color: #fff;
+        background-color: #02b802;
+        border-bottom: 1px solid #02b802; }
+    #about #my-skillset ul {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s all ease; }
+      #about #my-skillset ul li {
+        cursor: default; }
+        #about #my-skillset ul li:hover {
+          background-color: #02b802; }
 
 #portfolio {
   background-color: #f5f5f5; }
   #portfolio #portfolio-inner {
     flex-direction: row;
     flex-wrap: wrap; }
+    #portfolio #portfolio-inner #portfolio-thumbs {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
     #portfolio #portfolio-inner .portfolio-single-wrapper {
       position: relative;
       color: #252934;
@@ -328,8 +332,6 @@ nav {
   color: #252934; }
   #testimonials ul {
     list-style-type: none; }
-    #testimonials ul p {
-      text-align: left; }
     #testimonials ul hr {
       height: 1px;
       background-color: #02b8b5;
@@ -377,8 +379,7 @@ footer {
         background-color: #02b802; }
   footer #footer-inner #mine {
     color: #67696d;
-    margin-bottom: 50px;
-    text-align: center; }
+    margin-bottom: 50px; }
     footer #footer-inner #mine span {
       color: #b8025d; }
 

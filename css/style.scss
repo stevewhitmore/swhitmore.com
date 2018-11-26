@@ -87,7 +87,7 @@ h1, h2, h3 {
     overflow-x: hidden;
 }
 
-.flex,
+.flex, // !!!!!!!
 header {
     display: flex;
     flex-direction: column;
@@ -95,9 +95,11 @@ header {
     align-items: center;
 }
 
-section {
+.center {
     text-align: center;
-    color: #fff;
+}
+
+section {
     padding:80px;
 }
 
@@ -138,7 +140,6 @@ header {
     #intro {
         #intro-text {
             font-weight: 400;
-            text-align: center;
             margin-bottom: 1.5rem;
             h1 {
                 font-size: 3rem;
@@ -200,7 +201,6 @@ nav {
             list-style-type: none;
             align-self: flex-start;
             li {
-                text-align: left;
                 margin: 15px 0;
                 max-width: 100px;
                 a {
@@ -222,13 +222,13 @@ nav {
     }    
 }
 #about {
+    color: #fff;
     .hex-outer {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 100px;
         .hex-wrap {
             display: flex;
-            text-align: center;
             justify-content: space-evenly;
             flex-direction: column;
             margin: 0 15px;
@@ -359,8 +359,13 @@ nav {
 #portfolio {
     background-color: #f5f5f5;
     #portfolio-inner {
-        flex-direction: row;
+        flex-direction: row; //!!!!!!!
         flex-wrap: wrap;
+        #portfolio-thumbs {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         .portfolio-single-wrapper {
             position: relative;
             color: $slate;
@@ -443,9 +448,6 @@ nav {
     color: $slate;
     ul {
         list-style-type: none;
-        p {
-            text-align: left;
-        }
         hr {
             height: 1px;
             background-color: #02b8b5;
@@ -508,7 +510,6 @@ footer {
         #mine {
             color: #67696d;
             margin-bottom: 50px;
-            text-align: center;
             span {
                 color: $purple;
             }
