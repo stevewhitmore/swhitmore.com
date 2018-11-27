@@ -12,8 +12,7 @@
       rel="stylesheet">
     <link type='text/css' rel='stylesheet' href='./css/style.css'>
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>   
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>    
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/> 
 
     <!-- <script type="text/javascript">
     	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -173,23 +172,52 @@
           </div>
     </div>
     <div id="portfolio-inner" class="flex">
-        <div id="portfolio-thumbs" v-if="!showSingle">
-            <div class="portfolio-single-wrapper" v-for="project in projects">
-                <div class="overlay center">
-                    <div class="description"><strong>{{project.name}}</strong><br><span>{{project.tools}}</span></div>
-                    <div class="learn-more-link"><a :id="project.id" href="#" v-on:click="displaySingleProject">Learn More</a></div>
+        <div id="portfolio-thumbs">
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                    <div class="description"><strong>Archium</strong><br><span>Angular + Express.js</span></div>
+                    <button id="archium">Learn More</button>
                 </div>
-                <img :src="project.thumb" :alt="project.name + ' project thumbnail'" />
+                <img src="./images/archium.jpg" alt="Archium web app screenshot thumbnail" />
             </div>
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                    <div class="description"><strong>Teton West Colorado</strong><br><span>WordPress</span></div>
+                    <button id="teton">Learn More</button>
+                </div>
+                <img src="./images/teton.jpg" alt="Teton West Colorado website screenshot thumbnail" />
+            </div>
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                    <div class="description"><strong>Motion Constrained LLC</strong><br><span>WordPress</span></div>
+                    <div class="learn-more-link"><a href="#">Learn More</a></div>
+                </div>
+                <img src="./images/mc.jpg" alt="Motion Constrained LLC website screenshot thumbnail" />
+            </div>
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                    <div class="description"><strong>ConTRAPtions Escape Rooms</strong><br><span>WordPress</span></div>
+                    <div class="learn-more-link"><a href="#">Learn More</a></div>
+                </div>
+                <img src="./images/contraptions.jpg" alt="Contraptions Escape Rooms website screenshot thumbnail" />
+            </div>
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                    <div class="description"><strong>APFED</strong><br><span>WordPress</span></div>
+                    <button id="apfed">Learn More</button>
+                </div>
+                <img src="./images/apfed.jpg" alt="American Partnership of Eosinophilic Disorders (APFED) website screenshot thumbnail" />
+            </div>
+            <div class="portfolio-single-wrapper">
+                <div class="overlay">
+                <div class="description"><strong>Eye Consultants of Atlanta</strong><br><span>WordPress</span></div>
+                <div class="learn-more-link"><a href="#">Learn More</a></div>
+                </div>
+                <img src="./images/eye.jpg" alt="Eye Consultants of Atlanta website screenshot thumbnail" />
+            </div>    
         </div>
-        <div id="portfolio-single" v-else>
-            <ul class="slider">
-                <!-- <li v-for="value in singleProject.slides">
-                    <img :src="value"/>
-                </li> -->
-            </ul>
-            {{singleProject.text}}
-            <button v-on:click="toggleSingleProject">Go back</button>
+        <div id="portfolio-single">
+            <?php require_once('./includes/projects.php'); ?>
         </div>
     </div>
 </section>
@@ -236,7 +264,7 @@
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/project-component.js"></script>
+<script src="./js/project.js"></script>
 
 <script src="./js/carousels.js"></script>
 

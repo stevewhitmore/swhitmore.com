@@ -1,3 +1,5 @@
+
+
 new Vue({
     el: '#portfolio-inner',    
     data: {
@@ -9,7 +11,8 @@ new Vue({
         displaySingleProject: function(event) {
             event.preventDefault();
             
-            this.singleProject = this.projects.find(p => p.id === event.target.id);                  
+            this.singleProject = this.projects.find(p => p.id === event.target.id);
+            
             this.toggleSingleProject();
         },
         toggleSingleProject: function() {

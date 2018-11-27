@@ -109,22 +109,6 @@ function activateSection() {
 }
 
 
-// Array.prototype.forEach.call(sections, function(e) {
-//     sections[e.id] = e.pageYOffset;
-// });
-
-// window.onscroll = function() {
-//     let position = this.pageYOffset;
-//     for (i in sections) {
-//         console.log(section[i])
-//     }
-// }
-
-
-
-
-
-
 /************************************************
  * Skills Accordion
  ************************************************/
@@ -135,3 +119,9 @@ Array.from($skillSetButtons, btn => {
         btn.parentElement.classList.toggle('expanded');        
     });
 });
+
+
+
+/************************************************
+ * Portfolio
+ ************************************************/
