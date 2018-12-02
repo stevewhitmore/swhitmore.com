@@ -371,6 +371,7 @@ nav {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .portfolio-single-wrapper {
             position: relative;
@@ -616,6 +617,77 @@ footer {
             margin-bottom: 50px;
             span {
                 color: $purple;
+            }
+        }
+    }
+}
+
+
+/***********************
+* Mobile Styles
+************************/
+@media (max-width: 900px) {
+    #about {
+        padding: 40px;
+        .hex-outer {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            .hex-wrap {
+                margin: 0 10px 30px;
+                flex: 0 0 45%;
+                span {
+                    strong {
+                        margin: 5px 0 0 0;
+                    }
+                }
+            }
+        }
+        #about-main {
+            flex-flow: column wrap;  
+            > div {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+            #short-bio {
+                margin: 25px 0;
+            }
+            #my-skillset {
+                margin: 0;
+            }
+        }
+    }    
+}
+
+@media (max-width: 1024px) {
+    #portfolio {
+        padding: 40px;
+        // #portfolio-inner {
+        //     .portfolio-single-wrapper {
+        //         img {
+        //             width: auto;
+        //             height: auto;
+        //         }
+        //     }
+        // }
+        .project-overlay {
+            .project-inner {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    #portfolio {
+        padding: 20px;
+        #portfolio-inner {
+            .portfolio-single-wrapper {
+                width: 100%;
+            }
+        }
+        .project-overlay {
+            .project-inner {
+                width: 90%;
             }
         }
     }

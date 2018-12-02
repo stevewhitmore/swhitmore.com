@@ -272,7 +272,8 @@ nav {
     #portfolio #portfolio-inner #portfolio-thumbs {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      justify-content: center; }
     #portfolio #portfolio-inner .portfolio-single-wrapper {
       position: relative;
       color: #252934;
@@ -463,5 +464,41 @@ footer {
     margin-bottom: 50px; }
     footer #footer-inner #mine span {
       color: #b8025d; }
+
+/***********************
+* Mobile Styles
+************************/
+@media (max-width: 900px) {
+  #about {
+    padding: 40px; }
+    #about .hex-outer {
+      flex-wrap: wrap;
+      margin-bottom: 0; }
+      #about .hex-outer .hex-wrap {
+        margin: 0 10px 30px;
+        flex: 0 0 45%; }
+        #about .hex-outer .hex-wrap span strong {
+          margin: 5px 0 0 0; }
+    #about #about-main {
+      flex-flow: column wrap; }
+      #about #about-main > div {
+        flex: 0 0 100%;
+        width: 100%; }
+      #about #about-main #short-bio {
+        margin: 25px 0; }
+      #about #about-main #my-skillset {
+        margin: 0; } }
+@media (max-width: 1024px) {
+  #portfolio {
+    padding: 40px; }
+    #portfolio .project-overlay .project-inner {
+      width: 75%; } }
+@media (max-width: 720px) {
+  #portfolio {
+    padding: 20px; }
+    #portfolio #portfolio-inner .portfolio-single-wrapper {
+      width: 100%; }
+    #portfolio .project-overlay .project-inner {
+      width: 90%; } }
 
 /*# sourceMappingURL=style.css.map */
