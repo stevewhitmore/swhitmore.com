@@ -171,7 +171,8 @@ nav {
       justify-content: space-evenly;
       flex-direction: column;
       margin: 0 15px;
-      align-items: center; }
+      align-items: center;
+      flex: 1 0 25%; }
       #about .hex-outer .hex-wrap .hexagon {
         display: flex;
         justify-content: center;
