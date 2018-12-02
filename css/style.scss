@@ -389,6 +389,7 @@ nav {
                 height: 300px;
                 transition: 0.5s opacity ease;
                 opacity: 0;
+                text-align: center;
                 &:hover {
                     .description {
                         top: 25%;
@@ -414,12 +415,11 @@ nav {
                 .learn-more-link {
                     bottom: 0;
                     transition: 0.5s bottom ease;
-                    a {
+                    button {
                         display: block;
                         margin: 0 auto;
                         width: 180px;
                         color: $slate;
-                        text-decoration: none; //duplicate
                         font-size: 1.25rem;
                         font-family: inherit;
                         border: 2px solid $purple;
@@ -448,95 +448,102 @@ nav {
         }
     }
 }
-#portfolio-single {
-    .project-overlay {
-        visibility: hidden;
-        opacity: 0;
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.4);
-        z-index: 99;
-        transition: all 0.5s ease;
-        &.visible {
-            visibility: visible;
-            opacity: 1;
+
+.project-overlay {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    transition: all 0.5s ease;
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .project-inner {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        .slick-slide {
+            outline: none;
+            border-bottom: 1px solid $purple;
         }
-        .project-inner {
-            position: relative;
-            width: 50%;
-            margin: 0 auto;
-            background-color: #fff;
-            height: 80vh;
-            .project-text {
-                margin: 1rem;
-                h2 {
-                    margin: 0.5rem 0;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                }
+        .project-text {
+            margin: 1rem;
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
             }
-            .carousel-nav {
-                margin-top: -2.25rem;
-                position: absolute;
-                width: 100%;
-                .prev,
-                .next {
-                    color: #fff;
-                    background: rgba(0, 0, 0, 0.5);
-                    font-size: 2rem;
-                }
-                .prev {
-                    float: left;
-                }
-                .next {
-                    float: right;
-                }
+            h3 {
+                color: #c0c0c0;
+                font-weight: 600;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
-            .project-nav {
-                position: absolute;
-                bottom: 0;
-                display: flex;
-                justify-content: space-between;
+            p {
+                margin-top: 1rem;
+            }
+        }
+        .carousel-nav {
+            margin-top: -2.25rem;
+            position: absolute;
+            width: 100%;
+            .prev,
+            .next {
+                color: #fff;
+                background: rgba(0, 0, 0, 0.5);
+                font-size: 2rem;
+            }
+            .prev {
+                float: left;
+            }
+            .next {
+                float: right;
+            }
+        }
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            a {
+                display: block;
+                text-decoration: none; //duplicate
+                background-color: $purple;
+                color: #fff;
+                font-size: 1rem;
+                font-family: inherit;
                 padding: 10px;
-                box-sizing: border-box;
-                width: 100%;
-                a {
-                    display: block;
-                    text-decoration: none; //duplicate
-                    border-color: $slate;
-                    background-color: white;
-                    color: $slate;
-                    font-size: 1.25rem;
-                    font-family: inherit;
-                    border: 2px solid $purple;
-                    padding: 10px;
-                    cursor: pointer;
-                    transition: 0.5s all ease;
-                    &:hover,
-                    &:focus {
-                        background-color: $purple;
-                        border-color: $purple;
-                        color: #fff;
-                        outline: none;
-                    }
+                cursor: pointer;
+                transition: 0.5s all ease;
+                &:hover,
+                &:focus {
+                    background-color: #fff;
+                    color: $purple;
+                    outline: none;
                 }
-                .close {
-                    opacity: 0.7;
-                    font-size: 2rem;
-                    transition: all 0.5s ease;
-                    &:hover {
-                        cursor: pointer;
-                        opacity: 1;
-                    }
+            }
+            .close {
+                opacity: 0.7;
+                font-size: 2rem;
+                transition: all 0.5s ease;
+                &:hover {
+                    cursor: pointer;
+                    transform: rotate(90deg);
+                    opacity: 1;
                 }
             }
         }
     }
 }
+
 
 
 
