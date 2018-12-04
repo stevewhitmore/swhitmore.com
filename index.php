@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Steve Whitmore | Web Developer | Fort Collins, Colorado</title>
+    <title>Steve Whitmore | Web Developer | Kansas City, MO</title>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale = 1.0'>
     <meta name='description' content="Hi, I'm Steve Whitmore, a freelance web developer based out of Kansas City.">
@@ -28,7 +28,7 @@
 <body>
 <div class="container">
 <header id="home">
-    <div id="home-backdrop"></div>
+    <canvas id="home-backdrop"></canvas>
     <div id="intro" class="flex">
         <div id="intro-text" class="flex center">
             <h1>Hello, I'm <span class="highlight">Steve Whitmore</span>.</h1>
@@ -61,28 +61,28 @@
                     <i class="mdi mdi-speedometer"></i>
                 </div>
                 <span class="hex-title"><strong>Fast</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Every website and application optimized for the fastest load times.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-responsive"></i>
                 </div>
-                <span class="hex-title"><strong>Resonsive</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span class="hex-title"><strong>Responsive</strong></span>
+                <span>Styled to fit all devices as a modern standard.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-security-lock"></i>
                 </div>
                 <span class="hex-title"><strong>Secure</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Security is a top priority and always comes first.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-account-group"></i>
                 </div>
                 <span class="hex-title"><strong>Accessible</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Everybody has a right to experience the web.</span>
             </div>
         </div>
         <div id="about-main">
@@ -103,10 +103,7 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>jQuery</li>
-                        <li>Photoshop</li>
-                        <li>GIMP</li>
-                        <li>Illustrator</li>
-                        <li>Inkscape</li>
+                        <li>Photoshop/GIMP</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
@@ -114,13 +111,14 @@
                     <ul>
                         <li>Node.js</li>
                         <li>Express.js</li>
-                        <li>MongoDB</li>
                         <li>PHP</li>
-                        <li>JPA</li>
-                        <li>SQL</li>            
+                        <li>JPA</li>         
                         <li>Hibernate</li>
+                        <li>Spring Boot</li>
+                        <li>MongoDB</li>
+                        <li>DynamoDB</li>
+                        <li>SQL</li>
                         <li>JPQL</li>
-                        <li>Go</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
@@ -137,25 +135,28 @@
                 </div>
                 <div class="skill-wrapper">
                     <button>Web/System Administration <i class="mdi mdi-arrow-right"></i></button>
-                    <ul>                                        
-                        <li>Troubleshooting Issues</li>
-                        <li>Customer Service</li>
-                        <li>Communication</li>
+                    <ul>                        
+                        <li>Security Best Practices (OWASP)</li>
+                        <li>WCAG Compliant</li>
+                        <li>Scripting (BASH/Python)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>AWS E2E Networks</li>
                         <li>GNU/Linux</li>
                         <li>macOS</li>
                         <li>Windows</li>
-                        <li>Security best practices</li>
-                        <li>Scripting (BASH/Python)</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
-                    <button>Other <i class="mdi mdi-arrow-right"></i></button>
+                    <button>Current Toolset <i class="mdi mdi-arrow-right"></i></button>
                     <ul>
-                        <li>Git</li>
-                        <li>SVN</li>
-                        <li>C/C++</li>
-                        <li>Assembly Language</li>
-                        <li>Computer Architecture</li>
+                        <li>Ubuntu MATE</li>
+                        <li>VS Code</li>
+                        <li>Postman</li>
+                        <li>LAMP</li>
+                        <li>MongoDB</li>
+                        <li>GitLab Auto-DevOps</li>
+                        <li>Slack</li>
                     </ul>
                 </div>
             </div>
@@ -171,59 +172,18 @@
             <button-counter></button-counter>
           </div>
     </div>
-    <div id="portfolio-inner" class="flex">
+    <div id="portfolio-inner" class="flex inner">
         <div id="portfolio-thumbs">
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                    <div class="description"><strong>Archium</strong><br><span>Angular + Express.js</span></div>
-                    <button id="archium">Learn More</button>
-                </div>
-                <img src="./images/archium.jpg" alt="Archium web app screenshot thumbnail" />
-            </div>
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                    <div class="description"><strong>Teton West Colorado</strong><br><span>WordPress</span></div>
-                    <button id="teton">Learn More</button>
-                </div>
-                <img src="./images/teton.jpg" alt="Teton West Colorado website screenshot thumbnail" />
-            </div>
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                    <div class="description"><strong>Motion Constrained LLC</strong><br><span>WordPress</span></div>
-                    <div class="learn-more-link"><a href="#">Learn More</a></div>
-                </div>
-                <img src="./images/mc.jpg" alt="Motion Constrained LLC website screenshot thumbnail" />
-            </div>
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                    <div class="description"><strong>ConTRAPtions Escape Rooms</strong><br><span>WordPress</span></div>
-                    <div class="learn-more-link"><a href="#">Learn More</a></div>
-                </div>
-                <img src="./images/contraptions.jpg" alt="Contraptions Escape Rooms website screenshot thumbnail" />
-            </div>
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                    <div class="description"><strong>APFED</strong><br><span>WordPress</span></div>
-                    <button id="apfed">Learn More</button>
-                </div>
-                <img src="./images/apfed.jpg" alt="American Partnership of Eosinophilic Disorders (APFED) website screenshot thumbnail" />
-            </div>
-            <div class="portfolio-single-wrapper">
-                <div class="overlay">
-                <div class="description"><strong>Eye Consultants of Atlanta</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-                </div>
-                <img src="./images/eye.jpg" alt="Eye Consultants of Atlanta website screenshot thumbnail" />
-            </div>    
+            <?php require_once('./includes/template-project-thumbs.php'); ?>   
         </div>
         <div id="portfolio-single">
-            <?php require_once('./includes/projects.php'); ?>
+            <?php require_once('./includes/template-project-modal.php'); ?>
         </div>
     </div>
 </section>
 
 <section id="testimonials">
-    <ul class="slider">
+    <ul class="slider inner">
         <li class="testi-single">
             <p><q cite="http://www.suburban-bees.com/">My blogging partner Erin and I started working with Steve right after starting our blog. 
                 Technology is not a natural fit for either of us and Steve was instrumental in taking over the more technically involved aspects of the site & Wordpress. 
@@ -256,7 +216,7 @@
             <a href='tel:19702379599' target='_blank'><i class="mdi mdi-phone-outgoing"></i></a>
             <a href='mailto:steve@swhitmore.com'><i class="mdi mdi-email-outline"></i></a>
         </div>
-        <div id="mine" class="center">Steve Whitmore <span>&copy;2018</span></div>
+        <div id="mine" class="center">Steve Whitmore <span>&copy;<?php echo date('Y'); ?></span></div>
     </div>    
 </footer>
 </div>
@@ -265,7 +225,7 @@
 <script type="text/javascript" src="./slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/project.js"></script>
-
+<script src="./js/canvas.js"></script>
 <script src="./js/carousels.js"></script>
 
 <!-- <script src="./js/canvasjs.min.js"></script>

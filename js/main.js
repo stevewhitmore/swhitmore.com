@@ -94,7 +94,7 @@ function activateSection() {
     const windowPosition = this.pageYOffset;
 
     for (let el of elsThatWillHighlight) {
-        if (windowPosition >= el.position.top && windowPosition < el.position.bottom) {
+        if (windowPosition >= el.position.top - 50 && windowPosition < el.position.bottom) {
             document.querySelector('.active').classList.remove('active');
             link = navlinks.find(l => l.innerText.toLowerCase() === el.name);
             link.parentElement.classList.add('active');

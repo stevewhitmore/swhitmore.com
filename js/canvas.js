@@ -1,79 +1,93 @@
-// var space;
+var canvas = document.querySelector('canvas');
 
-// function floatySpace() {
-//   var colors = [
-//     "#FF3F8E", "#04C2C9", "#2E55C1"
-//   ];
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
+var c = canvas.getContext('2d');
 
-//   space = new CanvasSpace("canvas", "#252934" ).display();
-//   var form = new Form( space );
+// Mouse event management
+var mouse = {
+    x: undefined,
+    y: undefined
+}
 
-//   // Elements
-//   var pts = [];
-//   var center = space.size.$divide(1.8);
-//   var angle = -(window.innerWidth * 0.5);
-//   var count = window.innerWidth * 0.05;
-//   if (count > 150) count = 150;
-//   var line = new Line(0, angle).to(space.size.x, 0);
-//   var mouse = center.clone();
+var maxRadius = 40;
+var minRadius = 2;
+var circleColors = ['rgba(2, 184, 2, 0.3)', 'rgba(2, 184, 181, 0.3)', 'rgba(184, 2, 93, 0.3)'];
 
-//   var r = Math.min(space.size.x, space.size.y) * 1;
-//   for (var i=0; i<count; i++) {
-//     var p = new Vector( Math.random()*r-Math.random()*r, Math.random()*r-Math.random()*r );
-//     p.moveBy( center ).rotate2D( i*Math.PI/count, center);
-//     p.brightness = 0.1
-//     pts.push( p );
-//   }
+window.addEventListener('mousemove', function() {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
 
-//   // Canvas
-//   space.add({
-//     animate: function(time, fps, context) {
+window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
 
-//       for (var i=0; i<pts.length; i++) {
-//         // rotate the points slowly
-//         var pt = pts[i];
+function Circle(x, y, dx, dy, radius) {
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.radius = radius;
+    this.minRadius = radius;
+    this.color = circleColors[Math.floor((Math.random() * circleColors.length))];
 
-//         pt.rotate2D( Const.one_degree / 20, center);
-//         form.stroke( false ).fill( colors[i % 3] ).point(pt, 1);
+    this.draw = function() {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fill();
+        c.fillStyle = this.color;
+    }
 
-//         // get line from pt to the mouse line
-//         var ln = new Line( pt ).to( line.getPerpendicularFromPoint(pt));
+    this.update = function() {
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+            this.dx = -this.dx;
+        }
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.dy = -this.dy;
+        }
+        this.x += this.dx;
+        this.y += this.dy;
 
-//         // opacity of line derived from distance to the line
-//         var opacity = Math.min( 0.8, 1 - Math.abs( line.getDistanceFromPoint(pt)) / r);
-//         var distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
+        if (mouse.x - this.x < 50 && mouse.x - this.x > -50
+            && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
+            if (this.radius < maxRadius) {
+                this.radius += 1;
+            }
+            
+        } else if (this.radius > this.minRadius) {
+            this.radius -= 1;
+        }
 
-//         if (distFromMouse < 50) {
-//           if (pts[i].brightness < 0.3) pts[i].brightness += 0.015
-//         } else {
-//           if (pts[i].brightness > 0.1) pts[i].brightness -= 0.01
-//         }
+        this.draw();
+    }
+}
 
-//         var color = "rgba(255,255,255," + pts[i].brightness +")"
-//         form.stroke(color).fill( true ).line(ln);
-//       }
-//     },
+var x, y, dx, dy, radius, circleArray = [];
 
-//     onMouseAction: function(type, x, y, evt) {
-//       if (type=="move") {
-//         mouse.set(x,y);
-//       }
-//     },
+function init() {
+    circleArray = [];
+    for (let i = 0; i < 200; i++) {
+        radius = Math.random() * 5 + 1;
+        x = Math.random() * (innerWidth - radius) + radius;
+        y = Math.random() * (innerHeight - radius) + radius;
+        dx = (Math.random() - 0.5);
+        dy = (Math.random() - 0.5);
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+    }
 
-//     onTouchAction: function(type, x, y, evt) {
-//       this.onMouseAction(type, x, y);
-//     }
-//   });
+    animate();
+}
 
-//   space.bindMouse();
-//   space.play();
-// }
+function animate() {
+    requestAnimationFrame(animate);
+    c.clearRect(0, 0, innerWidth, innerHeight);
+    for (let circle of circleArray) {
+        circle.update();
+    }
+}
 
-// floatySpace();
-
-// $(window).resize(function(){
-//   space.removeAll();
-//   $('canvas').remove();
-//   floatySpace();
-// });
+init();

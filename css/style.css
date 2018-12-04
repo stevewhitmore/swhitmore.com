@@ -351,6 +351,7 @@ nav {
   .project-overlay .project-inner {
     position: relative;
     width: 50%;
+    max-width: 713px;
     margin: 0 auto;
     background-color: #fff; }
     .project-overlay .project-inner .slick-slide {
@@ -468,6 +469,11 @@ footer {
 /***********************
 * Mobile Styles
 ************************/
+@media (max-width: 1024px) {
+  #portfolio {
+    padding: 40px; }
+    #portfolio .project-overlay .project-inner {
+      width: 75%; } }
 @media (max-width: 900px) {
   #about {
     padding: 40px; }
@@ -488,16 +494,9 @@ footer {
         margin: 25px 0; }
       #about #about-main #my-skillset {
         margin: 0; } }
-@media (max-width: 1024px) {
-  #portfolio {
-    padding: 40px; }
-    #portfolio .project-overlay .project-inner {
-      width: 75%; } }
 @media (max-width: 720px) {
   #portfolio {
     padding: 20px; }
-    #portfolio #portfolio-inner .portfolio-single-wrapper {
-      width: 100%; }
     #portfolio .project-overlay .project-inner {
       width: 90%; } }
 

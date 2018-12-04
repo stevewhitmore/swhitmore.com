@@ -470,6 +470,7 @@ nav {
     .project-inner {
         position: relative;
         width: 50%;
+        max-width: 713px;
         margin: 0 auto;
         background-color: #fff;
         .slick-slide {
@@ -626,6 +627,17 @@ footer {
 /***********************
 * Mobile Styles
 ************************/
+@media (max-width: 1024px) {
+    #portfolio {
+        padding: 40px;
+        .project-overlay {
+            .project-inner {
+                width: 75%;
+            }
+        }
+    }
+}
+
 @media (max-width: 900px) {
     #about {
         padding: 40px;
@@ -658,33 +670,9 @@ footer {
     }    
 }
 
-@media (max-width: 1024px) {
-    #portfolio {
-        padding: 40px;
-        // #portfolio-inner {
-        //     .portfolio-single-wrapper {
-        //         img {
-        //             width: auto;
-        //             height: auto;
-        //         }
-        //     }
-        // }
-        .project-overlay {
-            .project-inner {
-                width: 75%;
-            }
-        }
-    }
-}
-
 @media (max-width: 720px) {
     #portfolio {
         padding: 20px;
-        #portfolio-inner {
-            .portfolio-single-wrapper {
-                width: 100%;
-            }
-        }
         .project-overlay {
             .project-inner {
                 width: 90%;
