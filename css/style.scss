@@ -217,9 +217,7 @@ nav {
                         color: $primary;
                     }
                 }
-            }
-            li.active {
-                a {
+                a.active {
                     color: $primary;
                 }
             }
@@ -679,4 +677,20 @@ footer {
             }
         }
     }
+}
+
+@media (max-width: 450px) {
+    section {
+        padding: 40px;
+    }
+    nav #nav-inner ul li a {
+        padding: 15px 20px;
+    }
+    #about #my-skillset button {
+        text-align: left;
+    }
+    #testimonials ul span {
+        text-align: center;
+    }
+    
 }

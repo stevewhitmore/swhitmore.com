@@ -51,7 +51,7 @@ $archium->tools = "Angular + Express.js";
 $archium->slides = array("./images/projects/slides/archium0.jpg", "./images/projects/slides/archium2.jpg", 
                         "./images/projects/slides/archium3.jpg", "./images/projects/slides/archium4.jpg");
 $archium->text = "There's not much to see here, and that's kinda the idea. Archium is a personal wiki application that stays out of your way and lets you get the job done. Ultra light-weight with an intuitive interface, Archium supports standard markup syntax with accessibility in mind.";
-$archium->url = "#";
+$archium->url = "https://github.com/stevewhitmore/archium";
 
 $teton = new Project("teton");
 $teton->name = "Teton West Colorado";
@@ -90,7 +90,7 @@ $eye->name = "Eye Consultants of Atlanta";
 $eye->tagline = "Leading Eye Care Provider";
 $eye->slides = array("./images/projects/slides/eye1.jpg", "./images/projects/slides/eye2.jpg", 
                     "./images/projects/slides/eye3.jpg", "./images/projects/slides/eye4.jpg");
-$eye->text = "Eye Consultants of Atlanta are the leading care providors for LASIK, cataract surgery, glaucoma treatment, and other general eye care in the Atlanta metro area. VisFire worked closely with them to come up with a design that would be optimal for their audience.";
+$eye->text = "Eye Consultants of Atlanta are the leading care providors for LASIK, cataract surgery, glaucoma treatment, and other general eye care in the Atlanta metro area.";
 $eye->url = "https://www.eyeconsultants.net/";
 
 array_push($projects, $archium, $teton, $mc, $escape, $apfed, $eye);

@@ -34,17 +34,17 @@
             <h1>Hello, I'm <span class="highlight">Steve Whitmore</span>.</h1>
             <p>I'm a code enthusiast, web magician, <br>and full-stack developer.</p>            
         </div>
-        <a id="view-work" href="#about">View my work <i class="mdi mdi-arrow-right"></i></a>    
+        <a href="#about" id="view-work" class="about-link">View my work <i class="mdi mdi-arrow-right"></i></a>    
     </div>
 </header>
 
 <nav class="flex">
     <div id="nav-inner">
         <ul>
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="home-link active">Home</a></li>
+            <li><a href="#about" class="about-link">About</a></li>
+            <li><a href="#portfolio" class="portfolio-link">Portfolio</a></li>
+            <li><a href="#contact" class="contact-link">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -91,7 +91,7 @@
                 <span><strong>Who is this guy?</strong></span>
                 <span><p>I'm a full-stack developer at the <a href="https://naic.org" target="_blank">NAIC</a> in Kansas City, MO.</p>
                 <p>I'm passionate about providing the best possible product<br>through clear communication, adhering to best practices,<br>and a strong dedication to clean, concise code.</p></span>
-                <span><p><a a href="#" data-scroll="contact">Let's make something special.</a></p></span>
+                
             </div>
             <div id="my-skillset">
                 <div class="skill-wrapper">
@@ -209,7 +209,7 @@
 
 <footer id="contact">
     <div id="footer-inner">
-        <a id="scroll-top" href="#home"><i class="mdi mdi-chevron-double-up"></i></a>
+        <a href="#home" id="scroll-top" class="home-link"><i class="mdi mdi-chevron-double-up"></i></a>
         <div id="social-wrap">
             <a href='https://github.com/stevewhitmore' target='_blank'><i class="mdi mdi-github-circle"></i></a>
             <a href='https://www.linkedin.com/in/steve-whitmore' target='_blank'><i class="mdi mdi-linkedin"></i></a>
@@ -224,7 +224,6 @@
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/project.js"></script>
 <script src="./js/canvas.js"></script>
 <script src="./js/carousels.js"></script>
 
