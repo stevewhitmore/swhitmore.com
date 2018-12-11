@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Steve Whitmore | Web Developer | Fort Collins, Colorado</title>
+    <title>Steve Whitmore | Web Developer | Kansas City, MO</title>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale = 1.0'>
     <meta name='description' content="Hi, I'm Steve Whitmore, a freelance web developer based out of Kansas City.">
@@ -11,8 +11,8 @@
     <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css"
       rel="stylesheet">
     <link type='text/css' rel='stylesheet' href='./css/style.css'>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="./js/vue-slider.js"></script>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/> 
 
     <!-- <script type="text/javascript">
     	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,70 +28,70 @@
 <body>
 <div class="container">
 <header id="home">
-    <div id="home-backdrop"></div>
+    <canvas id="home-backdrop"></canvas>
     <div id="intro" class="flex">
-        <div id="intro-text" class="flex">
+        <div id="intro-text" class="flex center">
             <h1>Hello, I'm <span class="highlight">Steve Whitmore</span>.</h1>
             <p>I'm a code enthusiast, web magician, <br>and full-stack developer.</p>            
         </div>
-        <a id="view-work" href="#about">View my work <i class="mdi mdi-arrow-right"></i></a>    
+        <a href="#about" id="view-work" class="about-link">View my work <i class="mdi mdi-arrow-right"></i></a>    
     </div>
 </header>
 
 <nav class="flex">
     <div id="nav-inner">
         <ul>
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="home-link active">Home</a></li>
+            <li><a href="#about" class="about-link">About</a></li>
+            <li><a href="#portfolio" class="portfolio-link">Portfolio</a></li>
+            <li><a href="#contact" class="contact-link">Contact</a></li>
         </ul>
     </div>
 </nav>
 
 <section id="about">
     <div class="inner">
-        <div class="heading">
+        <div class="heading center">
             <h2>ABOUT</h2>
             <div class="line"></div>
         </div>
         <div class="hex-outer">
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-speedometer"></i>
                 </div>
                 <span class="hex-title"><strong>Fast</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Every website and application optimized for the fastest load times.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-responsive"></i>
                 </div>
-                <span class="hex-title"><strong>Resonsive</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span class="hex-title"><strong>Responsive</strong></span>
+                <span>Styled to fit all devices as a modern standard.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-security-lock"></i>
                 </div>
                 <span class="hex-title"><strong>Secure</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Security is a top priority and always comes first.</span>
             </div>
-            <div class="hex-wrap">
+            <div class="hex-wrap center">
                 <div class="hexagon">
                     <i class="mdi mdi-account-group"></i>
                 </div>
                 <span class="hex-title"><strong>Accessible</strong></span>
-                <span>My layouts will work on any device, big or small.</span>
+                <span>Everybody has a right to experience the web.</span>
             </div>
         </div>
         <div id="about-main">
-            <div id="short-bio">
+            <div id="short-bio" class="center">
                 <img src="images/me-hex.png" alt="My cartoonized profile picture"/>
                 <span><strong>Who is this guy?</strong></span>
                 <span><p>I'm a full-stack developer at the <a href="https://naic.org" target="_blank">NAIC</a> in Kansas City, MO.</p>
                 <p>I'm passionate about providing the best possible product<br>through clear communication, adhering to best practices,<br>and a strong dedication to clean, concise code.</p></span>
-                <span><p><a a href="#" data-scroll="contact">Let's make something special.</a></p></span>
+                
             </div>
             <div id="my-skillset">
                 <div class="skill-wrapper">
@@ -103,10 +103,7 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>jQuery</li>
-                        <li>Photoshop</li>
-                        <li>GIMP</li>
-                        <li>Illustrator</li>
-                        <li>Inkscape</li>
+                        <li>Photoshop/GIMP</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
@@ -114,13 +111,14 @@
                     <ul>
                         <li>Node.js</li>
                         <li>Express.js</li>
-                        <li>MongoDB</li>
                         <li>PHP</li>
-                        <li>JPA</li>
-                        <li>SQL</li>            
+                        <li>JPA</li>         
                         <li>Hibernate</li>
+                        <li>Spring Boot</li>
+                        <li>MongoDB</li>
+                        <li>DynamoDB</li>
+                        <li>SQL</li>
                         <li>JPQL</li>
-                        <li>Go</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
@@ -137,25 +135,28 @@
                 </div>
                 <div class="skill-wrapper">
                     <button>Web/System Administration <i class="mdi mdi-arrow-right"></i></button>
-                    <ul>                                        
-                        <li>Troubleshooting Issues</li>
-                        <li>Customer Service</li>
-                        <li>Communication</li>
+                    <ul>                        
+                        <li>Security Best Practices (OWASP)</li>
+                        <li>WCAG Compliant</li>
+                        <li>Scripting (BASH/Python)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>AWS E2E Networks</li>
                         <li>GNU/Linux</li>
                         <li>macOS</li>
                         <li>Windows</li>
-                        <li>Security best practices</li>
-                        <li>Scripting (BASH/Python)</li>
                     </ul>
                 </div>
                 <div class="skill-wrapper">
-                    <button>Other <i class="mdi mdi-arrow-right"></i></button>
+                    <button>Current Toolset <i class="mdi mdi-arrow-right"></i></button>
                     <ul>
-                        <li>Git</li>
-                        <li>SVN</li>
-                        <li>C/C++</li>
-                        <li>Assembly Language</li>
-                        <li>Computer Architecture</li>
+                        <li>Ubuntu MATE</li>
+                        <li>VS Code</li>
+                        <li>Postman</li>
+                        <li>LAMP</li>
+                        <li>MongoDB</li>
+                        <li>GitLab Auto-DevOps</li>
+                        <li>Slack</li>
                     </ul>
                 </div>
             </div>
@@ -164,61 +165,25 @@
 </section>
 
 <section id="portfolio">
-    <div class="heading">
+    <div class="heading center">
         <h2>PORTFOLIO</h2>
         <div class="line"></div>
         <div id="components-demo">
             <button-counter></button-counter>
           </div>
     </div>
-    <div id="portfolio-inner" class="flex">
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-                <div class="description"><strong>Archium</strong><br><span>Angular + Express.js</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/archium.jpg" alt="Archium web app screenshot thumbnail" />
+    <div id="portfolio-inner" class="flex inner">
+        <div id="portfolio-thumbs">
+            <?php require_once('./includes/template-project-thumbs.php'); ?>   
         </div>
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-                <div class="description"><strong>Teton West Colorado</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/teton.jpg" alt="Teton West Colorado website screenshot thumbnail" />
-        </div>
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-                <div class="description"><strong>Motion Constrained LLC</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/mc.jpg" alt="Motion Constrained LLC website screenshot thumbnail" />
-        </div>
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-                <div class="description"><strong>ConTRAPtions Escape Rooms</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/contraptions.jpg" alt="Contraptions Escape Rooms website screenshot thumbnail" />
-        </div>
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-                <div class="description"><strong>APFED</strong><br><span>WordPress</span></div>
-                <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/apfed.jpg" alt="American Partnership of Eosinophilic Disorders (APFED) website screenshot thumbnail" />
-        </div>
-        <div class="portfolio-single-wrapper">
-            <div class="overlay">
-            <div class="description"><strong>Eye Consultants of Atlanta</strong><br><span>WordPress</span></div>
-            <div class="learn-more-link"><a href="#">Learn More</a></div>
-            </div>
-            <img src="./images/eye.jpg" alt="Eye Consultants of Atlanta website screenshot thumbnail" />
+        <div id="portfolio-single">
+            <?php require_once('./includes/template-project-modal.php'); ?>
         </div>
     </div>
 </section>
 
 <section id="testimonials">
-    <ul>
+    <ul class="slider inner">
         <li class="testi-single">
             <p><q cite="http://www.suburban-bees.com/">My blogging partner Erin and I started working with Steve right after starting our blog. 
                 Technology is not a natural fit for either of us and Steve was instrumental in taking over the more technically involved aspects of the site & Wordpress. 
@@ -229,35 +194,41 @@
             <hr>
             <span>- Tricia, co-founder of <a href="http://www.suburban-bees.com/" target="_blank" class="testi-source">Suburban B's</a></span>
         </li>
-        <!-- <li class="testi-single">
+        <li class="testi-single">
             <p><q cite="http://visfire.com/">Steve has assisted our team on numerous complex projects where a straightforward answer wasn’t always clear. He always seems able to find an outside perspective and a creative solution. He excels in front end development, responsive websites, content management systems, and customer service.  Many developers lack the communication skills to convey technical tasks to the client or management, but Steve has always excelled in this area. He also takes direction well and is self motivated.</q></p>
+            <hr>
             <span>- Cory, co-owner of <a href="http://visfire.com/" target="_blank" class="testi-source">VisFire</a></span>
         </li>
         <li class="testi-single">
             <p><q cite="http://www.cs.colostate.edu/~wilcox/">Steve was in my sophomore computer science course during Spring 2016, and did very well, receiving an A- letter grade. This course combines computer architecture, combinational and sequential logic, state machines, assembly programming, numerical representation, and C programming. The course is traditionally very challenging for sophomore students, and many do not pass the first time through. Steve completed all assignments with an average of over 98.5%, thus showing a high degree of diligence. He also had perfect attendance on all labs, quizzes, and exams. In my opinion Steve is easily is in the top 20% of the students I see, and I’m delighted to give him a recommendation.</q></p>
+            <hr>
             <span>- Dr. Wilcox, professor at <a href="http://www.cs.colostate.edu/~wilcox/" target="_blank" class="testi-source">Colorado State University</a></span>
-        </li> -->
+        </li>
     </ul>
 </section>
 
 <footer id="contact">
     <div id="footer-inner">
-        <a id="scroll-top" href="#home"><i class="mdi mdi-chevron-double-up"></i></a>
+        <a href="#home" id="scroll-top" class="home-link"><i class="mdi mdi-chevron-double-up"></i></a>
         <div id="social-wrap">
             <a href='https://github.com/stevewhitmore' target='_blank'><i class="mdi mdi-github-circle"></i></a>
             <a href='https://www.linkedin.com/in/steve-whitmore' target='_blank'><i class="mdi mdi-linkedin"></i></a>
             <a href='tel:19702379599' target='_blank'><i class="mdi mdi-phone-outgoing"></i></a>
             <a href='mailto:steve@swhitmore.com'><i class="mdi mdi-email-outline"></i></a>
         </div>
-        <div id="mine">Steve Whitmore <span>&copy;2018</span></div>
+        <div id="mine" class="center">Steve Whitmore <span>&copy;<?php echo date('Y'); ?></span></div>
     </div>    
 </footer>
 </div>
 
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
-
-<script src="./js/canvasjs.min.js"></script>
 <script src="./js/canvas.js"></script>
+<script src="./js/carousels.js"></script>
+
+<!-- <script src="./js/canvasjs.min.js"></script>
+<script src="./js/canvas.js"></script> -->
 
 
 <!--                                           .x+!?T!!+:.

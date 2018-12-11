@@ -1,79 +1,88 @@
-// var space;
+/**
+ * 
+ * falling circles
+ * 
+ */
 
-// function floatySpace() {
-//   var colors = [
-//     "#FF3F8E", "#04C2C9", "#2E55C1"
-//   ];
+
+const canvas = document.querySelector('canvas');
+const c = canvas.getContext('2d');
+
+canvas.width = window.innerWidth - 50;
+canvas.height = window.innerHeight - 50;
+
+class Circle {
+    constructor(x, y, dy, radius) {    
+        this.x = x;
+        this.y = y;
+        this.dy = dy;
+        this.radius = radius;
+    }
+    draw() {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fill();
+        c.fillStyle = 'white';
+    }
+
+    update() {
+        this.draw();
+    
+        if (this.y + (this.radius * 2) > canvas.height) {
+            if (this.dy > 0) {
+                this.dy = -(this.dy / 1.5);            
+            }
+            if (this.dy > -2 && this.dy < 0) {
+                this.dy = 0
+            }            
+        }
+        if (this.dy === 0) {
+            if (this.x > canvas.width / 2) {
+                this.x += 2;
+            } else {
+                this.x -= 2;
+            }
+            if (this.x < 0 || this.x > canvas.width) {
+                this.x = -50;
+            }
+        }
+
+        this.y += this.dy;
+        this.dy++;
+    }
+}
 
 
-//   space = new CanvasSpace("canvas", "#252934" ).display();
-//   var form = new Form( space );
+function getRandomNumberInRange(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-//   // Elements
-//   var pts = [];
-//   var center = space.size.$divide(1.8);
-//   var angle = -(window.innerWidth * 0.5);
-//   var count = window.innerWidth * 0.05;
-//   if (count > 150) count = 150;
-//   var line = new Line(0, angle).to(space.size.x, 0);
-//   var mouse = center.clone();
 
-//   var r = Math.min(space.size.x, space.size.y) * 1;
-//   for (var i=0; i<count; i++) {
-//     var p = new Vector( Math.random()*r-Math.random()*r, Math.random()*r-Math.random()*r );
-//     p.moveBy( center ).rotate2D( i*Math.PI/count, center);
-//     p.brightness = 0.1
-//     pts.push( p );
-//   }
+let x, y, dy, radius, circleArray = [];
 
-//   // Canvas
-//   space.add({
-//     animate: function(time, fps, context) {
+for (let i = 0; i < 5; i++) {
+    x = getRandomNumberInRange(50, canvas.width);
+    y = getRandomNumberInRange(50, canvas.height - 50);
+    radius = getRandomNumberInRange(5, 10);
+    dy = 0.01;
+    circleArray.push(new Circle(x, y, dy, radius));
+}
 
-//       for (var i=0; i<pts.length; i++) {
-//         // rotate the points slowly
-//         var pt = pts[i];
+function animateCircles() {
+    requestAnimationFrame(animateCircles);
+    c.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-//         pt.rotate2D( Const.one_degree / 20, center);
-//         form.stroke( false ).fill( colors[i % 3] ).point(pt, 1);
+    for (let circle of circleArray) {
+        circle.update();
+    }
+}
 
-//         // get line from pt to the mouse line
-//         var ln = new Line( pt ).to( line.getPerpendicularFromPoint(pt));
+animateCircles();
 
-//         // opacity of line derived from distance to the line
-//         var opacity = Math.min( 0.8, 1 - Math.abs( line.getDistanceFromPoint(pt)) / r);
-//         var distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
-
-//         if (distFromMouse < 50) {
-//           if (pts[i].brightness < 0.3) pts[i].brightness += 0.015
-//         } else {
-//           if (pts[i].brightness > 0.1) pts[i].brightness -= 0.01
-//         }
-
-//         var color = "rgba(255,255,255," + pts[i].brightness +")"
-//         form.stroke(color).fill( true ).line(ln);
-//       }
-//     },
-
-//     onMouseAction: function(type, x, y, evt) {
-//       if (type=="move") {
-//         mouse.set(x,y);
-//       }
-//     },
-
-//     onTouchAction: function(type, x, y, evt) {
-//       this.onMouseAction(type, x, y);
-//     }
-//   });
-
-//   space.bindMouse();
-//   space.play();
-// }
-
-// floatySpace();
-
-// $(window).resize(function(){
-//   space.removeAll();
-//   $('canvas').remove();
-//   floatySpace();
-// });
+// c.beginPath();
+// c.moveTo(50, 50);
+// c.lineTo(350, canvas.height);
+// c.stroke();
+// c.strokeStyle = 'white';
