@@ -2,79 +2,66 @@
 	Author: Steve Whitmore
 	URL: https://swhitmore.com
 **/
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  position: relative; }
-
-html,
-body {
-  width: 100%;
-  height: 100%; }
+  position: relative;
+}
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Open Sans";
   display: block;
   font-size: 16px;
-  cursor: default; }
-
-h1, h2, h3 {
-  font: inherit; }
+  cursor: default;
+  background-color: #252934;
+}
 
 .container {
-  overflow-x: hidden; }
-
-.center {
-  text-align: center; }
-
-.highlight {
-  color: #02b802; }
-
-#home {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  height: 100vh;
+  width: 100%;
+}
+.container #intro-text {
+  text-align: center;
+}
+.container #intro-text h1 {
+  font-size: 3.2rem;
+  color: #02b802;
+}
+.container #intro-text p {
   color: #fff;
-  height: 100vh; }
-  #home #home-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: #252934; }
-    #home #home-backdrop i {
-      position: absolute;
-      transform: rotate(90deg); }
-  #home #intro #intro-text {
-    font-weight: 400;
-    margin-bottom: 1.5rem; }
-    #home #intro #intro-text h1 {
-      font-size: 3.2rem;
-      line-height: 4rem; }
-      #home #intro #intro-text h1 .highlight {
-        font-weight: 600; }
-    #home #intro #intro-text p {
-      font-size: 1.5rem; }
-  #home #intro #social-wrap {
-    display: flex;
-    margin: 50px 0;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: center; }
-    #home #intro #social-wrap a {
-      font-size: 1.75rem;
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 25px;
-      background-color: #2e333a;
-      margin: 10px;
-      transition: 0.5s all ease; 
-    line-height: 1;}
-      #home #intro #social-wrap a:hover, #home #intro #social-wrap a:focus {
-        background-color: #02b802; }
+  font-size: 1.5rem;
+}
+.container #social-wrap {
+  display: flex;
+  margin: 50px 0;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+}
+.container #social-wrap a {
+  font-size: 1.75rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: #2e333a;
+  margin: 10px;
+  transition: 0.5s all ease;
+  line-height: 1;
+}
+.container #social-wrap a:hover {
+  background-color: #02b802;
+}
+.container #social-wrap a svg {
+  width: 40px;
+  height: 40px;
+}
 
 /*# sourceMappingURL=style.css.map */
