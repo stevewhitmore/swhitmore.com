@@ -6,6 +6,12 @@
 $dark-blue: #252934;
 $bright-green: #02b802;
 
+%flexit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
@@ -27,9 +33,7 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flexit;
   height: 100vh;
   width: 100%;
 
@@ -48,11 +52,9 @@ body {
   }
 
   #social-wrap {
-    display: flex;
+    @extend %flexit;
     margin: 50px 0;
-    flex-direction: row;
     list-style-type: none;
-    justify-content: center;
 
     a {
       font-size: 1.75rem;

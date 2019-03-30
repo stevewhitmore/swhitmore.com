@@ -2,6 +2,12 @@
 	Author: Steve Whitmore
 	URL: https://swhitmore.com
 **/
+.container #social-wrap, .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
@@ -22,9 +28,6 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100%;
 }
@@ -40,11 +43,8 @@ body {
   font-size: 1.5rem;
 }
 .container #social-wrap {
-  display: flex;
   margin: 50px 0;
-  flex-direction: row;
   list-style-type: none;
-  justify-content: center;
 }
 .container #social-wrap a {
   font-size: 1.75rem;
