@@ -4,6 +4,7 @@
 **/
 
 $dark-blue: #252934;
+$lighter-blue: #3d424a;
 $bright-green: #02b802;
 
 %flexit {
@@ -61,7 +62,7 @@ body {
       color: #fff;
       text-decoration: none;
       padding: 15px 25px;
-      background-color: #2e333a;
+      background-color: $lighter-blue;
       margin: 10px;
       transition: 0.5s all ease;
       line-height: 1;
@@ -79,3 +80,18 @@ body {
 
 }
 
+@media (max-width: 450px) {
+  .container {
+    #intro {
+      margin: 0 10px;
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
