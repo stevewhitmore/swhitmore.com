@@ -1,0 +1,80 @@
+/**
+	Author: Steve Whitmore
+	URL: https://swhitmore.com
+**/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  font-size: 16px;
+  cursor: default; }
+
+h1, h2, h3 {
+  font: inherit; }
+
+.container {
+  overflow-x: hidden; }
+
+.center {
+  text-align: center; }
+
+.highlight {
+  color: #02b802; }
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  color: #fff;
+  height: 100vh; }
+  #home #home-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #252934; }
+    #home #home-backdrop i {
+      position: absolute;
+      transform: rotate(90deg); }
+  #home #intro #intro-text {
+    font-weight: 400;
+    margin-bottom: 1.5rem; }
+    #home #intro #intro-text h1 {
+      font-size: 3.2rem;
+      line-height: 4rem; }
+      #home #intro #intro-text h1 .highlight {
+        font-weight: 600; }
+    #home #intro #intro-text p {
+      font-size: 1.5rem; }
+  #home #intro #social-wrap {
+    display: flex;
+    margin: 50px 0;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center; }
+    #home #intro #social-wrap a {
+      font-size: 1.75rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 25px;
+      background-color: #2e333a;
+      margin: 10px;
+      transition: 0.5s all ease; 
+    line-height: 1;}
+      #home #intro #social-wrap a:hover, #home #intro #social-wrap a:focus {
+        background-color: #02b802; }
+
+/*# sourceMappingURL=style.css.map */
