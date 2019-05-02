@@ -107,6 +107,11 @@ body {
     p {
       font-size: 1rem;
     }
+
+    #social-wrap {
+      flex-wrap: wrap;
+      width: 260px;
+    }
     
   }
 }
