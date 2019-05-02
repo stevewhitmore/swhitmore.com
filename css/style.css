@@ -68,6 +68,9 @@ body {
     .container h1 {
       font-size: 2.2rem; }
     .container p {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+    .container #social-wrap {
+      flex-wrap: wrap;
+      width: 260px; } }
 
 /*# sourceMappingURL=style.css.map */
