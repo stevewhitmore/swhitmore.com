@@ -12,7 +12,9 @@ function fetchIconNames() {
     return iconNames;
 }
 
-function setTooltipView(iconNames) {
+function setTooltipView() {
+    const iconNames = fetchIconNames();
+
     if (!iconNames || iconNames.length < 1) {
         console.error('invalid icon name');
         return;
@@ -33,9 +35,5 @@ function setTooltipView(iconNames) {
     }
 }
 
-function init() {
-    const iconNames = fetchIconNames();
-    setTooltipView(iconNames);
-}
+setTooltipView();
 
-init();
