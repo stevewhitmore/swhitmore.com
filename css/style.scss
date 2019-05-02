@@ -35,6 +35,7 @@ body {
 
 .container {
   @extend %flexit;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
 
@@ -46,10 +47,25 @@ body {
       color: $bright-green;
     }
 
-    p {
-      color: #fff;
-      font-size: 1.5rem;
+    #description {
+      @extend %flexit;
+      position: relative;
+      min-height: 66px;
+      overflow: hidden;
+
+      p {
+        position: absolute;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: 0.5s top ease;
+        top: 100px;
+      }
+
+      #me-desc {
+        top: 0;
+      }
     }
+    
   }
 
   #social-wrap {
@@ -82,16 +98,15 @@ body {
 
 @media (max-width: 450px) {
   .container {
-    #intro {
-      margin: 0 10px;
+    margin: 0 10px;
 
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+    h1 {
+      font-size: 2.2rem;
     }
+
+    p {
+      font-size: 1rem;
+    }
+    
   }
 }
