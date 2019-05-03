@@ -2,7 +2,8 @@
 
 function fetchIconNames() {
     const icons = document.querySelectorAll('#social-wrap a');
-    let iconNames = [];
+    const iconNames = [];
+    let iconName;
 
     icons.forEach(icon => {
         iconName = icon.id.replace('-icon', '');
@@ -12,15 +13,17 @@ function fetchIconNames() {
     return iconNames;
 }
 
-function setTooltipView(iconNames) {
+function setTooltipView() {
+    const iconNames = fetchIconNames();
+    const introText = document.querySelector('#me-desc');
+
     if (!iconNames || iconNames.length < 1) {
-        console.error('invalid icon name');
+        console.error('missing icon names');
         return;
     }
     for (const iconName of iconNames) {
         const icon = document.querySelector('#' + iconName + '-icon');
         const desc = document.querySelector('#' + iconName + '-desc');
-        const introText = document.querySelector('#me-desc');
 
         icon.addEventListener('mouseenter', () => {
             desc.style.top = '25%';
@@ -33,9 +36,5 @@ function setTooltipView(iconNames) {
     }
 }
 
-function init() {
-    const iconNames = fetchIconNames();
-    setTooltipView(iconNames);
-}
+setTooltipView();
 
-init();
