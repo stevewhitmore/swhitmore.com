@@ -61,6 +61,8 @@ body {
       .container #social-wrap a svg {
         width: 40px;
         height: 40px; }
+        .container #social-wrap a svg path {
+          fill: #fff; }
 
 @media (max-width: 450px) {
   .container {
