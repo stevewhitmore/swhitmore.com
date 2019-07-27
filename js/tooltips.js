@@ -17,7 +17,7 @@ function setTooltipView() {
     const iconNames = fetchIconNames();
     const introText = document.querySelector('#me-desc');
 
-    if (!iconNames || iconNames.length < 1) {
+    if (iconNames.length < 1) {
         console.error('missing icon names');
         return;
     }
