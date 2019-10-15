@@ -1,6 +1,6 @@
-// Because CSS doesn't have cousin selectors... 
+// Because CSS doesn't have cousin selectors...
 
-function fetchIconNames() {
+const fetchIconNames = () => {
     const icons = document.querySelectorAll('#social-wrap a');
     const iconNames = [];
     let iconName;
@@ -13,7 +13,7 @@ function fetchIconNames() {
     return iconNames;
 }
 
-function setTooltipView() {
+(() => {
     const iconNames = fetchIconNames();
     const introText = document.querySelector('#me-desc');
 
@@ -34,7 +34,4 @@ function setTooltipView() {
             introText.style.top = '0';
         });
     }
-}
-
-setTooltipView();
-
+})();
