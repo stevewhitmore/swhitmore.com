@@ -2,102 +2,80 @@
 	Author: Steve Whitmore
 	URL: https://swhitmore.com
 **/
-.container #social-wrap, .container #intro-text #description, .container {
+.container, .container #intro-text #description, .container #social-wrap {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
-}
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype"); }
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  position: relative;
-}
+  position: relative; }
 
 body {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   display: block;
   font-size: 16px;
   cursor: default;
-  background-color: #252934;
-}
+  background-color: #252934; }
 
 .container {
   flex-direction: column;
   height: 100vh;
-  width: 100%;
-}
-.container #intro-text {
-  text-align: center;
-}
-.container #intro-text h1 {
-  font-size: 3.2rem;
-  color: #02b802;
-}
-.container #intro-text #description {
-  position: relative;
-  min-height: 66px;
-  overflow: hidden;
-}
-.container #intro-text #description p {
-  position: absolute;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: 0.5s top ease;
-  top: 100px;
-}
-.container #intro-text #description #me-desc {
-  top: 0;
-}
-.container #social-wrap {
-  margin: 50px 0;
-  list-style-type: none;
-  max-width: 400px;
-  flex-wrap: wrap;
-}
-.container #social-wrap a {
-  font-size: 1.75rem;
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 25px;
-  background-color: #3d424a;
-  margin: 10px;
-  transition: 0.5s all ease;
-  line-height: 1;
-}
-.container #social-wrap a:hover {
-  background-color: #02b802;
-}
-.container #social-wrap a svg {
-  width: 40px;
-  height: 40px;
-}
-.container #social-wrap a svg path {
-  fill: #fff;
-}
+  width: 100%; }
+  .container #intro-text {
+    text-align: center; }
+    .container #intro-text h1 {
+      font-size: 3.2rem;
+      color: #02b802; }
+    .container #intro-text #description {
+      position: relative;
+      min-height: 66px;
+      overflow: hidden; }
+      .container #intro-text #description p {
+        position: absolute;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: 0.5s top ease;
+        top: 100px; }
+      .container #intro-text #description #me-desc {
+        top: 0; }
+  .container #social-wrap {
+    margin: 50px 0;
+    list-style-type: none;
+    flex-wrap: wrap; }
+    .container #social-wrap a {
+      font-size: 1.75rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 25px;
+      background-color: #3d424a;
+      margin: 10px;
+      transition: 0.5s all ease;
+      line-height: 1; }
+      .container #social-wrap a:hover {
+        background-color: #02b802; }
+      .container #social-wrap a svg {
+        width: 40px;
+        height: 40px; }
+        .container #social-wrap a svg path {
+          fill: #fff; }
 
 @media (max-width: 450px) {
   .container {
-    margin: 0 10px;
-  }
-  .container #intro-text {
-    width: 260px;
-  }
-  .container #intro-text #description h1 {
-    font-size: 2.2rem;
-  }
-  .container #intro-text #description p {
-    font-size: 1rem;
-  }
-  .container #social-wrap {
-    flex-wrap: wrap;
-    width: 260px;
-  }
-}
+    margin: 0 10px; }
+    .container #intro-text {
+      width: 260px; }
+      .container #intro-text #description h1 {
+        font-size: 2.2rem; }
+      .container #intro-text #description p {
+        font-size: 1rem; }
+    .container #social-wrap {
+      flex-wrap: wrap;
+      width: 260px; } }
 
 /*# sourceMappingURL=style.css.map */
