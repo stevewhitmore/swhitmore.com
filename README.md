@@ -1,4 +1,4 @@
-# stevewhitmore.github.io/
+# stevewhitmore.github.io
 A landing page for my work and professional profile - <https://stevewhitmore.github.io>
 
 --
