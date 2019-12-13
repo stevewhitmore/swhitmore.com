@@ -13,11 +13,6 @@ $bright-green: #02b802;
   align-items: center;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +21,7 @@ $bright-green: #02b802;
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: 'Roboto', sans-serif;
   display: block;
   font-size: 16px;
   cursor: default;
@@ -45,6 +40,10 @@ body {
     h1 {
       font-size: 3.2rem;
       color: $bright-green;
+      font-family: 'Reem Kufi', sans-serif;
+      font-size: 3.75em;
+      font-weight: 600;
+      line-height: 1em;
     }
 
     #description {
@@ -59,6 +58,8 @@ body {
         font-size: 1.5rem;
         transition: 0.5s top ease;
         top: 100px;
+        margin: 1.5rem 0;
+        font-weight: 100;
       }
 
       #me-desc {
@@ -70,7 +71,6 @@ body {
 
   #social-wrap {
     @extend %flexit;
-    margin: 50px 0;
     list-style-type: none;
     flex-wrap: wrap;
 
@@ -78,21 +78,23 @@ body {
       font-size: 1.75rem;
       color: #fff;
       text-decoration: none;
-      padding: 15px 25px;
-      background-color: $lighter-blue;
       margin: 10px;
-      transition: 0.5s all ease;
       line-height: 1;
 
       &:hover {
-        background-color: $bright-green;
+        svg {
+          path {
+            fill: $bright-green;
+          }
+        }
       }
 
       svg {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
 
         path {
+          transition: 0.5s all ease;
           fill: #fff;
         }
       }
@@ -106,7 +108,6 @@ body {
     margin: 0 10px;
 
     #intro-text {
-      width: 260px;
 
       #description {
         h1 {

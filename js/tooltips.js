@@ -26,7 +26,7 @@ const fetchIconNames = () => {
         const desc = document.querySelector('#' + iconName + '-desc');
 
         icon.addEventListener('mouseenter', () => {
-            desc.style.top = '25%';
+            desc.style.top = '0';
             introText.style.top = '-100px';
         });
         icon.addEventListener('mouseleave', () => {
