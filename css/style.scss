@@ -108,12 +108,11 @@ body {
     margin: 0 10px;
 
     #intro-text {
+      h1 {
+        font-size: 2.2rem;
+      }
 
       #description {
-        h1 {
-          font-size: 2.2rem;
-        }
-
         p {
           font-size: 1rem;
         }
@@ -122,7 +121,12 @@ body {
 
     #social-wrap {
       flex-wrap: wrap;
-      width: 260px;
+      a {
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
 
   }
