@@ -1,5 +1,5 @@
 # swhitmore.com
-A landing page for my work and professional profile - <https://swhitmore.com>
+A landing page for my work and professional profile - <https://stevewhitmore.github.io>
 
 --
 
