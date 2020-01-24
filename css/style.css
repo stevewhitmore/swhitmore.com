@@ -59,8 +59,8 @@ body {
       .container #social-wrap a:hover svg path {
         fill: #02b802; }
       .container #social-wrap a svg {
-        width: 60px;
-        height: 60px; }
+        width: 40px;
+        height: 40px; }
         .container #social-wrap a svg path {
           transition: 0.5s all ease;
           fill: #fff; }
