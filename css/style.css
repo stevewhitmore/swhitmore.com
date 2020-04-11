@@ -2,78 +2,93 @@
 	Author: Steve Whitmore
 	URL: https://swhitmore.com
 **/
-.container, .container #intro-text #description, .container #social-wrap {
+.container #social-wrap, .container #intro-text #description, .container {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  position: relative; }
+  position: relative;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: block;
   font-size: 16px;
   cursor: default;
-  background-color: #252934; }
+  background-color: #252934;
+}
 
 .container {
   flex-direction: column;
   height: 100vh;
-  width: 100%; }
-  .container #intro-text {
-    text-align: center; }
-    .container #intro-text h1 {
-      font-size: 3.2rem;
-      color: #02b802;
-      font-family: 'Reem Kufi', sans-serif;
-      font-size: 3.75em;
-      font-weight: 600;
-      line-height: 1em; }
-    .container #intro-text #description {
-      position: relative;
-      min-height: 66px;
-      overflow: hidden; }
-      .container #intro-text #description p {
-        position: absolute;
-        color: #fff;
-        font-size: 1.5rem;
-        transition: 0.5s top ease;
-        top: 100px;
-        margin: 1.5rem 0;
-        font-weight: 100; }
-      .container #intro-text #description #me-desc {
-        top: 0; }
-  .container #social-wrap {
-    list-style-type: none;
-    flex-wrap: wrap; }
-    .container #social-wrap a {
-      font-size: 1.75rem;
-      color: #fff;
-      text-decoration: none;
-      margin: 10px;
-      line-height: 1; }
-      .container #social-wrap a:hover svg path {
-        fill: #02b802; }
-      .container #social-wrap a svg {
-        width: 60px;
-        height: 60px; }
-        .container #social-wrap a svg path {
-          transition: 0.5s all ease;
-          fill: #fff; }
+  width: 100%;
+}
+.container #intro-text {
+  text-align: center;
+}
+.container #intro-text h1 {
+  font-size: 3.2rem;
+  color: #02b802;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 3.75em;
+  font-weight: 600;
+  line-height: 1em;
+}
+.container #intro-text #description {
+  position: relative;
+  min-height: 66px;
+  overflow: hidden;
+}
+.container #intro-text #description p {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: 0.5s top ease;
+  top: 100px;
+  margin: 1.5rem 0;
+  font-weight: 100;
+}
+.container #intro-text #description #me-desc {
+  top: 0;
+}
+.container #social-wrap {
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.container #social-wrap a {
+  font-size: 1.75rem;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  line-height: 1;
+}
+.container #social-wrap a:hover svg path {
+  fill: #02b802;
+}
+.container #social-wrap a svg {
+  width: 40px;
+  height: 40px;
+}
+.container #social-wrap a svg path {
+  transition: 0.5s all ease;
+  fill: #fff;
+}
 
 @media (max-width: 450px) {
   .container #intro-text h1 {
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+  }
   .container #intro-text #description p {
-    font-size: 1rem; }
+    font-size: 1rem;
+  }
   .container #social-wrap {
-    flex-wrap: wrap; }
-    .container #social-wrap a svg {
-      width: 40px;
-      height: 40px; } }
+    flex-wrap: wrap;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
