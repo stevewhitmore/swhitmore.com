@@ -1,7 +1,7 @@
 // Because CSS doesn't have cousin selectors...
 
 const fetchIconNames = () => {
-    const icons = document.querySelectorAll('#social-wrap a');
+    const icons = document.querySelectorAll('.social-wrap a');
     const iconNames = [];
     let iconName;
 

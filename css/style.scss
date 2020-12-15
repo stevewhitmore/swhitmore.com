@@ -1,8 +1,3 @@
-/**
-	Author: Steve Whitmore
-	URL: https://swhitmore.com
-**/
-
 $dark-blue: #252934;
 $lighter-blue: #3d424a;
 $bright-green: #02b802;
@@ -10,7 +5,6 @@ $bright-green: #02b802;
 %flexit {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 * {
@@ -34,7 +28,7 @@ body {
   height: 100vh;
   width: 100%;
 
-  #intro-text {
+  .intro-text {
     text-align: center;
 
     h1 {
@@ -44,9 +38,15 @@ body {
       font-size: 3.75em;
       font-weight: 600;
       line-height: 1em;
+      span {
+        display: block;
+        margin-bottom: 1.5rem;
+        color: #fff;
+        font-size: 3rem;
+      }
     }
 
-    #description {
+    .description {
       @extend %flexit;
       position: relative;
       min-height: 66px;
@@ -69,7 +69,7 @@ body {
 
   }
 
-  #social-wrap {
+  .social-wrap {
     @extend %flexit;
     list-style-type: none;
     flex-wrap: wrap;
@@ -103,23 +103,22 @@ body {
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
   .container {
 
-    #intro-text {
+    .intro-text {
       h1 {
         font-size: 2.2rem;
+        span {
+          font-size: 1.5rem;
+        }
       }
 
-      #description {
+      .description {
         p {
           font-size: 1rem;
         }
       }
-    }
-
-    #social-wrap {
-      flex-wrap: wrap;
     }
 
   }
