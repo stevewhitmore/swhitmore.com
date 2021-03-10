@@ -83,7 +83,7 @@ body {
 
       &:hover {
         svg {
-          path {
+          path, rect {
             fill: $bright-green;
           }
         }
@@ -93,7 +93,7 @@ body {
         width: 40px;
         height: 40px;
 
-        path {
+        path, rect {
           transition: 0.5s all ease;
           fill: #fff;
         }

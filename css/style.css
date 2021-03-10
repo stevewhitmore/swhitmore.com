@@ -56,12 +56,12 @@ body {
       text-decoration: none;
       margin: 10px;
       line-height: 1; }
-      .container .social-wrap a:hover svg path {
+      .container .social-wrap a:hover svg path, .container .social-wrap a:hover svg rect {
         fill: #02b802; }
       .container .social-wrap a svg {
         width: 40px;
         height: 40px; }
-        .container .social-wrap a svg path {
+        .container .social-wrap a svg path, .container .social-wrap a svg rect {
           transition: 0.5s all ease;
           fill: #fff; }
 
