@@ -17,8 +17,8 @@ body {
 
 .container {
   flex-direction: column;
-  height: 100vh;
-  width: 100%; }
+  justify-content: flex-start;
+  margin: 10rem 2rem 0; }
   .container .intro-text {
     text-align: center; }
     .container .intro-text h1 {
@@ -35,6 +35,7 @@ body {
         font-size: 3rem; }
     .container .intro-text .description {
       position: relative;
+      margin: 2rem 0;
       min-height: 66px;
       overflow: hidden; }
       .container .intro-text .description p {
@@ -48,7 +49,8 @@ body {
       .container .intro-text .description #me-desc {
         top: 0; }
   .container .social-wrap {
-    list-style-type: none;
+    width: 65%;
+    align-self: center;
     flex-wrap: wrap; }
     .container .social-wrap a {
       font-size: 1.75rem;

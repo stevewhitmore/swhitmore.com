@@ -25,8 +25,8 @@ body {
 .container {
   @extend %flexit;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
+  justify-content: flex-start;
+  margin: 10rem 2rem 0;
 
   .intro-text {
     text-align: center;
@@ -49,6 +49,7 @@ body {
     .description {
       @extend %flexit;
       position: relative;
+      margin: 2rem 0;
       min-height: 66px;
       overflow: hidden;
 
@@ -71,7 +72,8 @@ body {
 
   .social-wrap {
     @extend %flexit;
-    list-style-type: none;
+    width: 65%;
+    align-self: center;
     flex-wrap: wrap;
 
     a {
